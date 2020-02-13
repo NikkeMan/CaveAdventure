@@ -556,12 +556,12 @@ MonoBehaviour:
   groundCheck: {fileID: 1858483657}
   moveSpeed: 300
   direction: {x: 0, y: 0}
-  jumpForce: 8
+  jumpForce: 10
   jumpBuffer: 0.15
   maxSpeed: 0
   linearDrag: 4
-  gravity: 1
-  fallMult: 5
+  gravity: 1.5
+  fallMult: 4
   airDragMult: 0.15
   onGround: 0
   groundCheckLength: 0.69
