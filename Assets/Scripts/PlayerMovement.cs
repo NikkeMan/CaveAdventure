@@ -13,12 +13,21 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
     public Vector2 direction;
+    Vector2 directionMemory;
     bool facingRight = true;
+
+    [Header("Dash")]
+    [SerializeField] float dashDistance = 3f;
+    [SerializeField] float dashCooldown = 1f;
+    [SerializeField] float dashCooldownTimer = 1f;
+    bool hasDashed = false;
+    bool isDashButtonDown = false;
 
     [Header("Jump")]
     [SerializeField] float jumpForce;
     [SerializeField] float jumpBuffer;
     float jumpBufferTimer;
+    [SerializeField] bool canDoubleJump = false;
 
     [Header("Physics")]
     [SerializeField] float maxSpeed = 8f;
@@ -31,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     public bool onGround = false;
     [SerializeField] float groundCheckLength = 0.6f;
     [SerializeField] Vector3 colliderOffset;
+
+    [Header("PowerUps")]
+    [SerializeField] bool hasPUDoubleJump = false;
+    [SerializeField] bool hasPUDash = false;
 
     // [Header("Animation")]
 
@@ -51,17 +64,63 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferTimer = Time.time + jumpBuffer;
         }
 
+        if (Input.GetButtonDown("Fire3") && dashCooldownTimer <= 0)
+        {
+            isDashButtonDown = true;
+        }
+
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (direction.x != 0 || direction.y != 0)
+        {
+            directionMemory = direction;
+        }
+
+        if (onGround)
+        {
+            canDoubleJump = true;
+        }
     }
 
     void FixedUpdate()
     {
         MovePlayer(direction.x);
         ModifyPhysics();
+        Dash();
 
-        if (jumpBufferTimer > Time.time && onGround)
+        if (jumpBufferTimer > Time.time)
         {
-            Jump();
+            if (onGround)
+            {
+                Jump();
+            }
+            else
+            {
+                if (canDoubleJump && hasPUDoubleJump)
+                {
+                    Jump();
+                    canDoubleJump = false;
+                }
+            }
+        }
+    }
+
+    void Dash()
+    {
+        if (dashCooldownTimer >= 0)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
+
+        if (isDashButtonDown)
+        {
+            if (dashCooldownTimer <= 0)
+            {
+                //rb.velocity = new Vector2(0, 0);
+                rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + new Vector2(directionMemory.x, 0) * dashDistance);
+                isDashButtonDown = false;
+                dashCooldownTimer = dashCooldown;
+            }
         }
     }
 
