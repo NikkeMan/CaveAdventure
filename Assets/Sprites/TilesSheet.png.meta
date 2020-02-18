@@ -10,13 +10,13 @@ TextureImporter:
     second: TilesSheet_1
   - first:
       213: 4797537416911354522
-    second: TilesSheet_2
+    second: Ground_Upper_Left
   - first:
       213: 256359302125338526
-    second: TilesSheet_3
+    second: Ground_Upper_Middle
   - first:
       213: 4387116141799594514
-    second: TilesSheet_4
+    second: Ground_Upper_Right
   - first:
       213: 6562323930635717825
     second: TilesSheet_5
@@ -25,40 +25,40 @@ TextureImporter:
     second: TilesSheet_6
   - first:
       213: -8609145580084340125
-    second: TilesSheet_7
+    second: Lava_1_Frame_1
   - first:
       213: 676843574507369988
-    second: TilesSheet_8
+    second: Lava_2_Frame_1
   - first:
       213: -5887213669000475421
-    second: TilesSheet_9
+    second: Ground_Middle_Left
   - first:
       213: -43973073094068955
-    second: TilesSheet_10
+    second: Ground_Middle
   - first:
       213: 3330128466686338700
-    second: TilesSheet_11
+    second: Ground_Middle_Right
   - first:
       213: 4534361846114567870
-    second: TilesSheet_12
+    second: Ground_Rock_2
   - first:
       213: -4649495558253484832
     second: TilesSheet_13
   - first:
       213: -2314470220260304696
-    second: TilesSheet_14
+    second: Lava_1_Frame_2
   - first:
       213: -695635784218213979
-    second: TilesSheet_15
+    second: Lava_2_Frame_2
   - first:
       213: 6830576432249156684
-    second: TilesSheet_16
+    second: Ground_Lower_Left
   - first:
       213: -3726515721465741549
-    second: TilesSheet_17
+    second: Ground_Lower_Middle
   - first:
       213: 4009920383557736170
-    second: TilesSheet_18
+    second: Ground_Lower_Right
   - first:
       213: 4651816515139398863
     second: TilesSheet_19
@@ -67,19 +67,19 @@ TextureImporter:
     second: TilesSheet_20
   - first:
       213: -3938195219952950329
-    second: TilesSheet_21
+    second: Lava_1_Frame_3
   - first:
       213: 139106605747894709
-    second: TilesSheet_22
+    second: Lava_2_Frame_3
   - first:
       213: 6814023503764315698
-    second: TilesSheet_23
+    second: Ground_Platform_Left
   - first:
       213: 4027099030017347609
-    second: TilesSheet_24
+    second: Ground_Platform_Middle
   - first:
       213: -6690625854837126232
-    second: TilesSheet_25
+    second: Ground_Platform_Right
   - first:
       213: 8647652406257321104
     second: TilesSheet_26
@@ -88,19 +88,19 @@ TextureImporter:
     second: TilesSheet_27
   - first:
       213: 3475692139257367328
-    second: TilesSheet_28
+    second: Lava_1_Frame_4
   - first:
       213: -5573988888199623967
-    second: TilesSheet_29
+    second: Lava_2_Frame_4
   - first:
       213: -3742320272447604656
-    second: TilesSheet_30
+    second: Ground_Wall_Upper
   - first:
       213: 3228060602251604146
-    second: TilesSheet_31
+    second: Ground_Wall_Middle
   - first:
       213: -2954310888430610466
-    second: TilesSheet_32
+    second: Ground_Wall_Lower
   - first:
       213: -7241979070369050889
     second: TilesSheet_33
@@ -109,16 +109,16 @@ TextureImporter:
     second: TilesSheet_34
   - first:
       213: 8750300092157067249
-    second: TilesSheet_35
+    second: Lava_Under
   - first:
       213: 3383967930857108278
-    second: TilesSheet_36
+    second: Ground_Rock
   - first:
       213: -3410874451636703264
-    second: TilesSheet_37
+    second: Ground_Spike_Up
   - first:
       213: -2603512741587926625
-    second: TilesSheet_38
+    second: Ground_Spike_Down
   - first:
       213: 2669361186756078128
     second: TilesSheet_39
@@ -217,7 +217,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,7 +238,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_2
+      name: Ground_Upper_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -259,7 +259,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_3
+      name: Ground_Upper_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -280,7 +280,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_4
+      name: Ground_Upper_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -301,7 +301,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_7
+      name: Lava_1_Frame_1
       rect:
         serializedVersion: 2
         x: 2
@@ -322,7 +322,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_8
+      name: Lava_2_Frame_1
       rect:
         serializedVersion: 2
         x: 11
@@ -343,7 +343,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -356,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_9
+      name: Ground_Middle_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -364,7 +364,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_10
+      name: Ground_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -385,7 +385,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -398,7 +398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_11
+      name: Ground_Middle_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -406,7 +406,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -419,7 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_12
+      name: Ground_Rock_2
       rect:
         serializedVersion: 2
         x: 47
@@ -427,7 +427,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -440,7 +440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_14
+      name: Lava_1_Frame_2
       rect:
         serializedVersion: 2
         x: 2
@@ -448,7 +448,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -461,7 +461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_15
+      name: Lava_2_Frame_2
       rect:
         serializedVersion: 2
         x: 11
@@ -469,7 +469,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -482,7 +482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_16
+      name: Ground_Lower_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -490,7 +490,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -503,7 +503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_17
+      name: Ground_Lower_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -511,7 +511,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -524,7 +524,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_18
+      name: Ground_Lower_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -532,7 +532,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,7 +545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_21
+      name: Lava_1_Frame_3
       rect:
         serializedVersion: 2
         x: 2
@@ -553,7 +553,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,7 +566,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_22
+      name: Lava_2_Frame_3
       rect:
         serializedVersion: 2
         x: 11
@@ -574,7 +574,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -587,7 +587,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_23
+      name: Ground_Platform_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -595,7 +595,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -608,7 +608,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_24
+      name: Ground_Platform_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -616,7 +616,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -629,7 +629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_25
+      name: Ground_Platform_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -637,7 +637,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -650,7 +650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_28
+      name: Lava_1_Frame_4
       rect:
         serializedVersion: 2
         x: 2
@@ -658,7 +658,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -671,7 +671,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_29
+      name: Lava_2_Frame_4
       rect:
         serializedVersion: 2
         x: 11
@@ -679,7 +679,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -692,7 +692,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_30
+      name: Ground_Wall_Upper
       rect:
         serializedVersion: 2
         x: 20
@@ -700,7 +700,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -713,7 +713,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_31
+      name: Ground_Wall_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -721,7 +721,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -734,7 +734,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_32
+      name: Ground_Wall_Lower
       rect:
         serializedVersion: 2
         x: 38
@@ -742,7 +742,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -755,7 +755,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_35
+      name: Lava_Under
       rect:
         serializedVersion: 2
         x: 11
@@ -763,7 +763,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -776,7 +776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_36
+      name: Ground_Rock
       rect:
         serializedVersion: 2
         x: 20
@@ -784,7 +784,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -797,7 +797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_37
+      name: Ground_Spike_Up
       rect:
         serializedVersion: 2
         x: 29
@@ -805,7 +805,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -818,7 +818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_38
+      name: Ground_Spike_Down
       rect:
         serializedVersion: 2
         x: 38
@@ -826,7 +826,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
