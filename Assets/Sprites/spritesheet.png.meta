@@ -10,13 +10,13 @@ TextureImporter:
     second: spritesheet_1
   - first:
       213: -1259408508766424310
-    second: spritesheet_2
+    second: Ground_Upper_Left
   - first:
       213: -5962389079421231736
-    second: spritesheet_3
+    second: Ground_Upper_Middle
   - first:
       213: 2788568348960109317
-    second: spritesheet_4
+    second: Ground_upper_Right
   - first:
       213: 226702753830753226
     second: spritesheet_5
@@ -49,13 +49,13 @@ TextureImporter:
     second: spritesheet_14
   - first:
       213: 4773514653529381359
-    second: spritesheet_15
+    second: Ground_Middle_Left
   - first:
       213: 6413020478584453356
-    second: spritesheet_16
+    second: Ground_Middle
   - first:
       213: -6420534950463556919
-    second: spritesheet_17
+    second: Ground_Middle_Right
   - first:
       213: 8367830406354533065
     second: spritesheet_18
@@ -94,13 +94,13 @@ TextureImporter:
     second: spritesheet_29
   - first:
       213: 5339229742347854233
-    second: spritesheet_30
+    second: Ground_Lower_Left
   - first:
       213: -5381851817413261878
-    second: spritesheet_31
+    second: Ground_Lower_Middle
   - first:
       213: 6123212246031883711
-    second: spritesheet_32
+    second: Ground_Lower_Right
   - first:
       213: -8158273205997960823
     second: spritesheet_33
@@ -139,13 +139,13 @@ TextureImporter:
     second: spritesheet_44
   - first:
       213: 156824180473805077
-    second: spritesheet_45
+    second: Ground_Platform_Left
   - first:
       213: 9109323392184880499
-    second: spritesheet_46
+    second: Ground_Platform_Middle
   - first:
       213: 2598833627876718223
-    second: spritesheet_47
+    second: Ground_Platform_Right
   - first:
       213: -2033776217500058201
     second: spritesheet_48
@@ -187,13 +187,13 @@ TextureImporter:
     second: spritesheet_60
   - first:
       213: -4180478380050184196
-    second: spritesheet_61
+    second: Ground_Wall_Upper
   - first:
       213: 1528203702100030697
-    second: spritesheet_62
+    second: Ground_Wall_Middle
   - first:
       213: 4057492184055871464
-    second: spritesheet_63
+    second: Ground_Wall_Lower
   - first:
       213: -8151809739343590656
     second: spritesheet_64
@@ -232,13 +232,13 @@ TextureImporter:
     second: spritesheet_75
   - first:
       213: -1933497887715123699
-    second: spritesheet_76
+    second: Ground_Ball
   - first:
       213: -7088014404590163093
-    second: spritesheet_77
+    second: Ground_Spike_Up
   - first:
       213: -4231952906909274518
-    second: spritesheet_78
+    second: Ground_Spike_Down
   - first:
       213: -3253330834931219228
     second: spritesheet_79
@@ -473,7 +473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_2
+      name: Ground_Upper_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -494,7 +494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_3
+      name: Ground_Upper_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -515,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_4
+      name: Ground_upper_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -620,7 +620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_15
+      name: Ground_Middle_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -641,7 +641,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_16
+      name: Ground_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -662,7 +662,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_17
+      name: Ground_Middle_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -767,7 +767,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_30
+      name: Ground_Lower_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -788,7 +788,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_31
+      name: Ground_Lower_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -809,7 +809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_32
+      name: Ground_Lower_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -872,7 +872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_45
+      name: Ground_Platform_Left
       rect:
         serializedVersion: 2
         x: 20
@@ -893,7 +893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_46
+      name: Ground_Platform_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -914,7 +914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_47
+      name: Ground_Platform_Right
       rect:
         serializedVersion: 2
         x: 38
@@ -977,7 +977,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_61
+      name: Ground_Wall_Upper
       rect:
         serializedVersion: 2
         x: 20
@@ -998,7 +998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_62
+      name: Ground_Wall_Middle
       rect:
         serializedVersion: 2
         x: 29
@@ -1019,7 +1019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_63
+      name: Ground_Wall_Lower
       rect:
         serializedVersion: 2
         x: 38
@@ -1061,7 +1061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_76
+      name: Ground_Ball
       rect:
         serializedVersion: 2
         x: 20
@@ -1082,7 +1082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_77
+      name: Ground_Spike_Up
       rect:
         serializedVersion: 2
         x: 29
@@ -1103,7 +1103,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_78
+      name: Ground_Spike_Down
       rect:
         serializedVersion: 2
         x: 38
