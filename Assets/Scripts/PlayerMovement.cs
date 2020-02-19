@@ -15,11 +15,14 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 direction;
     Vector2 directionMemory;
     bool facingRight = true;
+    public bool playerInputsDisabled = false;
 
     [Header("Dash")]
     [SerializeField] float dashDistance = 3f;
     [SerializeField] float dashCooldown = 1f;
     [SerializeField] float dashCooldownTimer = 1f;
+    [SerializeField] bool dashBump = false;
+    [SerializeField] float dashBumpAmount = 20f;
     bool hasDashed = false;
     bool isDashButtonDown = false;
 
@@ -59,17 +62,25 @@ public class PlayerMovement : MonoBehaviour
         onGround = Physics2D.Raycast(groundCheck.transform.position + colliderOffset, Vector2.down, groundCheckLength, groundLayer) || 
             Physics2D.Raycast(groundCheck.transform.position - colliderOffset, Vector2.down, groundCheckLength, groundLayer);
 
-        if (Input.GetButtonDown("Jump"))
+        if (!playerInputsDisabled)
         {
-            jumpBufferTimer = Time.time + jumpBuffer;
+            if (Input.GetButtonDown("Jump"))
+            {
+                jumpBufferTimer = Time.time + jumpBuffer;
+            }
+
+            if (Input.GetButtonDown("Fire3") && dashCooldownTimer <= 0 && hasPUDash)
+            {
+                isDashButtonDown = true;
+            }
+
+            direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
 
-        if (Input.GetButtonDown("Fire3") && dashCooldownTimer <= 0 && hasPUDash)
+        else
         {
-            isDashButtonDown = true;
+            direction = new Vector2(0, 0);
         }
-
-        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         if (direction.x != 0 || direction.y != 0)
         {
@@ -100,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
             if (onGround)
             {
                 Jump();
+                animator.SetBool("isJumping", true);
             }
             else
             {
@@ -107,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Jump();
                     canDoubleJump = false;
+                    animator.SetBool("isDoubleJumping", true);
                 }
             }
         }
@@ -125,6 +138,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 //rb.velocity = new Vector2(0, 0);
                 rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + new Vector2(directionMemory.x, 0) * dashDistance);
+
+                if (dashBump)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, dashBumpAmount);
+                }
+
                 isDashButtonDown = false;
                 dashCooldownTimer = dashCooldown;
             }
@@ -153,7 +172,6 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         jumpBufferTimer = 0;
-        animator.SetBool("isJumping", true);
     }
 
     void ModifyPhysics()

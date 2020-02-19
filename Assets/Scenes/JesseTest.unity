@@ -416,7 +416,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007900357, y: 0.64185977}
+  m_Offset: {x: 0.007900357, y: 0.5446286}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -427,7 +427,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.603564, y: 1.242248}
+  m_Size: {x: 0.603564, y: 1.0477858}
   m_EdgeRadius: 0
 --- !u!114 &616642910
 MonoBehaviour:
@@ -445,11 +445,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   groundCheck: {fileID: 1858483657}
-  moveSpeed: 300
+  moveSpeed: 250
   direction: {x: 0, y: 0}
+  playerInputsDisabled: 0
   dashDistance: 4
   dashCooldown: 0.75
   dashCooldownTimer: 0
+  dashBump: 1
+  dashBumpAmount: 0
   jumpForce: 11.5
   jumpBuffer: 0.15
   canDoubleJump: 0
@@ -461,8 +464,8 @@ MonoBehaviour:
   onGround: 0
   groundCheckLength: 0.69
   colliderOffset: {x: -0.25, y: 0, z: 0}
-  hasPUDoubleJump: 1
-  hasPUDash: 1
+  hasPUDoubleJump: 0
+  hasPUDash: 0
 --- !u!1 &690968032
 GameObject:
   m_ObjectHideFlags: 0
@@ -20323,6 +20326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 704111287}
   - component: {fileID: 704111286}
+  - component: {fileID: 704111288}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -20380,6 +20384,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &704111288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704111285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 981353209}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &899301935
 GameObject:
   m_ObjectHideFlags: 0
@@ -66976,6 +66997,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &981353208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981353210}
+  - component: {fileID: 981353209}
+  m_Layer: 0
+  m_Name: CamConfiner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &981353209
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981353208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 14.363934, y: 10.38542}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 108.71415, y: 47.789974}
+  m_EdgeRadius: 0
+--- !u!4 &981353210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981353208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.20175, y: -2.3046875, z: -324.3125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735876705
 GameObject:
   m_ObjectHideFlags: 0
@@ -67169,7 +67247,7 @@ Transform:
   - {fileID: 690968033}
   - {fileID: 594697346}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052521309
 GameObject:
@@ -67583,7 +67661,7 @@ Transform:
   m_Children:
   - {fileID: 1858483658}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5401927878754943565
 GameObject:
