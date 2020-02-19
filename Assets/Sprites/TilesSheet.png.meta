@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 383490961038363683
-    second: TilesSheet_0
+    second: Background_1
   - first:
       213: -2100064700172131651
-    second: TilesSheet_1
+    second: Background_2
   - first:
       213: 4797537416911354522
     second: Ground_Upper_Left
@@ -25,10 +25,10 @@ TextureImporter:
     second: TilesSheet_6
   - first:
       213: -8609145580084340125
-    second: Lava_1_Frame_1
+    second: Lava_1_1
   - first:
       213: 676843574507369988
-    second: Lava_2_Frame_1
+    second: Lava_2_1
   - first:
       213: -5887213669000475421
     second: Ground_Middle_Left
@@ -46,10 +46,10 @@ TextureImporter:
     second: TilesSheet_13
   - first:
       213: -2314470220260304696
-    second: Lava_1_Frame_2
+    second: Lava_1_2
   - first:
       213: -695635784218213979
-    second: Lava_2_Frame_2
+    second: Lava_2_2
   - first:
       213: 6830576432249156684
     second: Ground_Lower_Left
@@ -67,10 +67,10 @@ TextureImporter:
     second: TilesSheet_20
   - first:
       213: -3938195219952950329
-    second: Lava_1_Frame_3
+    second: Lava_1_3
   - first:
       213: 139106605747894709
-    second: Lava_2_Frame_3
+    second: Lava_2_3
   - first:
       213: 6814023503764315698
     second: Ground_Platform_Left
@@ -88,10 +88,10 @@ TextureImporter:
     second: TilesSheet_27
   - first:
       213: 3475692139257367328
-    second: Lava_1_Frame_4
+    second: Lava_1_4
   - first:
       213: -5573988888199623967
-    second: Lava_2_Frame_4
+    second: Lava_2_4
   - first:
       213: -3742320272447604656
     second: Ground_Wall_Upper
@@ -209,7 +209,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilesSheet_0
+      name: Background_1
       rect:
         serializedVersion: 2
         x: 2
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_1
+      name: Background_2
       rect:
         serializedVersion: 2
         x: 11
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_1_Frame_1
+      name: Lava_1_1
       rect:
         serializedVersion: 2
         x: 2
@@ -335,7 +335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_2_Frame_1
+      name: Lava_2_1
       rect:
         serializedVersion: 2
         x: 11
@@ -419,28 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_Rock_2
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 38
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb64eb0331a4dee30800000000000000
-      internalID: 4534361846114567870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lava_1_Frame_2
+      name: Lava_1_2
       rect:
         serializedVersion: 2
         x: 2
@@ -461,7 +440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_2_Frame_2
+      name: Lava_2_2
       rect:
         serializedVersion: 2
         x: 11
@@ -545,7 +524,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_1_Frame_3
+      name: Lava_1_3
       rect:
         serializedVersion: 2
         x: 2
@@ -566,7 +545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_2_Frame_3
+      name: Lava_2_3
       rect:
         serializedVersion: 2
         x: 11
@@ -650,7 +629,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_1_Frame_4
+      name: Lava_1_4
       rect:
         serializedVersion: 2
         x: 2
@@ -671,7 +650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava_2_Frame_4
+      name: Lava_2_4
       rect:
         serializedVersion: 2
         x: 11

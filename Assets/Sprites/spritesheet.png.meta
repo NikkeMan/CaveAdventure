@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8020143640844766479
-    second: spritesheet_0
+    second: Background_1
   - first:
       213: -6251682230944352461
-    second: spritesheet_1
+    second: Background_2
   - first:
       213: -1259408508766424310
     second: Ground_Upper_Left
@@ -19,34 +19,34 @@ TextureImporter:
     second: Ground_upper_Right
   - first:
       213: 226702753830753226
-    second: spritesheet_5
+    second: Chest_Closed
   - first:
       213: -7921052967969465774
-    second: spritesheet_6
+    second: Chest_Open
   - first:
       213: -1370661682523340017
-    second: spritesheet_7
+    second: Bar_Large
   - first:
       213: -8276262488406422588
-    second: spritesheet_8
+    second: Heart_Container
   - first:
       213: -5906973516983679737
-    second: spritesheet_9
+    second: Heart_Fill
   - first:
       213: 5777552420452043588
-    second: spritesheet_10
+    second: Player_Idle_1
   - first:
       213: 1269540525142108225
-    second: spritesheet_11
+    second: Player_Idle_2
   - first:
       213: -2630129836624287915
-    second: spritesheet_12
+    second: Player_Run_1
   - first:
       213: -7676219313036738927
-    second: spritesheet_13
+    second: Lava_1_1
   - first:
       213: 6985626698306143173
-    second: spritesheet_14
+    second: Lava_2_1
   - first:
       213: 4773514653529381359
     second: Ground_Middle_Left
@@ -64,34 +64,34 @@ TextureImporter:
     second: spritesheet_19
   - first:
       213: -2642393358525368334
-    second: spritesheet_20
+    second: Player_Run_2
   - first:
       213: 182515998739034355
-    second: spritesheet_21
+    second: Player_Run_3
   - first:
       213: 5390129371266227295
-    second: spritesheet_22
+    second: Player_Run_4
   - first:
       213: 1111231892956182058
-    second: spritesheet_23
+    second: Player_Attack_1
   - first:
       213: 3042023047814558122
-    second: spritesheet_24
+    second: Player_Attack_2
   - first:
       213: -1297572194080285004
-    second: spritesheet_25
+    second: Player_Attack_3
   - first:
       213: -5351138903708955224
-    second: spritesheet_26
+    second: Player_Attack_4
   - first:
       213: -5895191231709818157
-    second: spritesheet_27
+    second: Player_Jump_1
   - first:
       213: 4116411608050698257
-    second: spritesheet_28
+    second: Lava_1_2
   - first:
       213: 2696214034221626940
-    second: spritesheet_29
+    second: Lava_2_2
   - first:
       213: 5339229742347854233
     second: Ground_Lower_Left
@@ -103,40 +103,40 @@ TextureImporter:
     second: Ground_Lower_Right
   - first:
       213: -8158273205997960823
-    second: spritesheet_33
+    second: Player_Jump_2
   - first:
       213: -7803645574393991823
-    second: spritesheet_34
+    second: Player_Jump_3
   - first:
       213: -8540854674809487797
-    second: spritesheet_35
+    second: Player_Jump_4
   - first:
       213: -2800876817223335725
-    second: spritesheet_36
+    second: Player_Jump_5
   - first:
       213: 7686511047796825374
-    second: spritesheet_37
+    second: Slime_Red_1
   - first:
       213: -3654083477062011090
-    second: spritesheet_38
+    second: Slime_Red_2
   - first:
       213: -2213891765562235112
-    second: spritesheet_39
+    second: Slime_Red_3
   - first:
       213: 7816579671404485219
-    second: spritesheet_40
+    second: Slime_Red_4
   - first:
       213: 8434893452232278025
-    second: spritesheet_41
+    second: Slime_Black_1
   - first:
       213: 3062383759408700104
-    second: spritesheet_42
+    second: Slime_Black_2
   - first:
       213: -3687489427716195
-    second: spritesheet_43
+    second: Lava_1_3
   - first:
       213: 1751618896811465624
-    second: spritesheet_44
+    second: Lava_2_3
   - first:
       213: 156824180473805077
     second: Ground_Platform_Left
@@ -148,43 +148,43 @@ TextureImporter:
     second: Ground_Platform_Right
   - first:
       213: -2033776217500058201
-    second: spritesheet_48
+    second: Slime_Black_3
   - first:
       213: -9123048126347468465
-    second: spritesheet_49
+    second: Slime_Black_4
   - first:
       213: -2731854774048942697
-    second: spritesheet_50
+    second: Bat_Red_1
   - first:
       213: 6463828295129595045
-    second: spritesheet_51
+    second: Bat_Red_2
   - first:
       213: 2920052613717862253
-    second: spritesheet_52
+    second: Bat_Red_3
   - first:
       213: -8873626391699258573
-    second: spritesheet_53
+    second: Bat_Red_4
   - first:
       213: 1752520659032480968
-    second: spritesheet_54
+    second: Bat_Black_1
   - first:
       213: -8188909564941553941
-    second: spritesheet_55
+    second: Bat_Black_2
   - first:
       213: 8203099556873942403
-    second: spritesheet_56
+    second: Bat_Black_3
   - first:
       213: -4180715191943267252
-    second: spritesheet_57
+    second: Bat_Black_4
   - first:
       213: -3423954715984931012
-    second: spritesheet_58
+    second: Bar_Fill_Blue
   - first:
       213: -1173080275824419151
-    second: spritesheet_59
+    second: Lava_1_4
   - first:
       213: -3194430170665604626
-    second: spritesheet_60
+    second: Lava_2_4
   - first:
       213: -4180478380050184196
     second: Ground_Wall_Upper
@@ -196,13 +196,13 @@ TextureImporter:
     second: Ground_Wall_Lower
   - first:
       213: -8151809739343590656
-    second: spritesheet_64
+    second: Bar_Fill_Green
   - first:
       213: 1486011304807624349
-    second: spritesheet_65
+    second: Bar_Fill_Red
   - first:
       213: -7546874146221198523
-    second: spritesheet_66
+    second: Bar_Small
   - first:
       213: 8203384205706593396
     second: spritesheet_67
@@ -229,10 +229,10 @@ TextureImporter:
     second: spritesheet_74
   - first:
       213: 4358228687824631495
-    second: spritesheet_75
+    second: Lava_Under
   - first:
       213: -1933497887715123699
-    second: Ground_Ball
+    second: Ground_Rock
   - first:
       213: -7088014404590163093
     second: Ground_Spike_Up
@@ -431,7 +431,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_0
+      name: Background_1
       rect:
         serializedVersion: 2
         x: 2
@@ -452,7 +452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_1
+      name: Background_2
       rect:
         serializedVersion: 2
         x: 11
@@ -536,7 +536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_5
+      name: Chest_Closed
       rect:
         serializedVersion: 2
         x: 47
@@ -557,15 +557,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_6
+      name: Chest_Open
       rect:
         serializedVersion: 2
         x: 56
         y: 66
         width: 9
         height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -578,7 +578,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_13
+      name: Lava_1_1
       rect:
         serializedVersion: 2
         x: 2
@@ -599,7 +599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_14
+      name: Lava_2_1
       rect:
         serializedVersion: 2
         x: 11
@@ -725,7 +725,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_28
+      name: Lava_1_2
       rect:
         serializedVersion: 2
         x: 2
@@ -746,7 +746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_29
+      name: Lava_2_2
       rect:
         serializedVersion: 2
         x: 11
@@ -830,7 +830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_43
+      name: Lava_1_3
       rect:
         serializedVersion: 2
         x: 2
@@ -851,7 +851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_44
+      name: Lava_2_3
       rect:
         serializedVersion: 2
         x: 11
@@ -935,7 +935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_59
+      name: Lava_1_4
       rect:
         serializedVersion: 2
         x: 2
@@ -956,7 +956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_60
+      name: Lava_2_4
       rect:
         serializedVersion: 2
         x: 11
@@ -1040,7 +1040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_75
+      name: Lava_Under
       rect:
         serializedVersion: 2
         x: 11
@@ -1061,7 +1061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_Ball
+      name: Ground_Rock
       rect:
         serializedVersion: 2
         x: 20
@@ -1124,7 +1124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_7
+      name: Bar_Large
       rect:
         serializedVersion: 2
         x: 67
@@ -1145,7 +1145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_8
+      name: Heart_Container
       rect:
         serializedVersion: 2
         x: 78
@@ -1166,13 +1166,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_9
+      name: Heart_Fill
       rect:
         serializedVersion: 2
-        x: 87
-        y: 66
-        width: 5
-        height: 4
+        x: 86
+        y: 65
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1187,7 +1187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_10
+      name: Player_Idle_1
       rect:
         serializedVersion: 2
         x: 95
@@ -1208,7 +1208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_11
+      name: Player_Idle_2
       rect:
         serializedVersion: 2
         x: 105
@@ -1229,7 +1229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_12
+      name: Player_Run_1
       rect:
         serializedVersion: 2
         x: 95
@@ -1250,7 +1250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_20
+      name: Player_Run_2
       rect:
         serializedVersion: 2
         x: 105
@@ -1271,7 +1271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_21
+      name: Player_Run_3
       rect:
         serializedVersion: 2
         x: 115
@@ -1292,7 +1292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_22
+      name: Player_Run_4
       rect:
         serializedVersion: 2
         x: 126
@@ -1313,7 +1313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_23
+      name: Player_Attack_1
       rect:
         serializedVersion: 2
         x: 95
@@ -1334,7 +1334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_24
+      name: Player_Attack_2
       rect:
         serializedVersion: 2
         x: 105
@@ -1355,7 +1355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_25
+      name: Player_Attack_3
       rect:
         serializedVersion: 2
         x: 117
@@ -1376,7 +1376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_26
+      name: Player_Attack_4
       rect:
         serializedVersion: 2
         x: 132
@@ -1397,7 +1397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_27
+      name: Player_Jump_1
       rect:
         serializedVersion: 2
         x: 96
@@ -1418,7 +1418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_33
+      name: Player_Jump_2
       rect:
         serializedVersion: 2
         x: 106
@@ -1439,7 +1439,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_34
+      name: Player_Jump_3
       rect:
         serializedVersion: 2
         x: 116
@@ -1460,7 +1460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_35
+      name: Player_Jump_4
       rect:
         serializedVersion: 2
         x: 128
@@ -1481,7 +1481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_36
+      name: Player_Jump_5
       rect:
         serializedVersion: 2
         x: 138
@@ -1502,7 +1502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_37
+      name: Slime_Red_1
       rect:
         serializedVersion: 2
         x: 50
@@ -1523,7 +1523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_38
+      name: Slime_Red_2
       rect:
         serializedVersion: 2
         x: 59
@@ -1544,7 +1544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_39
+      name: Slime_Red_3
       rect:
         serializedVersion: 2
         x: 68
@@ -1565,7 +1565,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_40
+      name: Slime_Red_4
       rect:
         serializedVersion: 2
         x: 77
@@ -1586,7 +1586,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_41
+      name: Slime_Black_1
       rect:
         serializedVersion: 2
         x: 50
@@ -1607,7 +1607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_42
+      name: Slime_Black_2
       rect:
         serializedVersion: 2
         x: 59
@@ -1628,7 +1628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_48
+      name: Slime_Black_3
       rect:
         serializedVersion: 2
         x: 68
@@ -1649,7 +1649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_49
+      name: Slime_Black_4
       rect:
         serializedVersion: 2
         x: 77
@@ -1670,7 +1670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_50
+      name: Bat_Red_1
       rect:
         serializedVersion: 2
         x: 48
@@ -1691,7 +1691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_51
+      name: Bat_Red_2
       rect:
         serializedVersion: 2
         x: 57
@@ -1712,7 +1712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_52
+      name: Bat_Red_3
       rect:
         serializedVersion: 2
         x: 68
@@ -1733,7 +1733,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_53
+      name: Bat_Red_4
       rect:
         serializedVersion: 2
         x: 77
@@ -1754,7 +1754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_54
+      name: Bat_Black_1
       rect:
         serializedVersion: 2
         x: 48
@@ -1775,7 +1775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_55
+      name: Bat_Black_2
       rect:
         serializedVersion: 2
         x: 57
@@ -1796,7 +1796,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_56
+      name: Bat_Black_3
       rect:
         serializedVersion: 2
         x: 68
@@ -1817,7 +1817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_57
+      name: Bat_Black_4
       rect:
         serializedVersion: 2
         x: 77
@@ -1838,7 +1838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_58
+      name: Bar_Fill_Blue
       rect:
         serializedVersion: 2
         x: 68
@@ -1859,7 +1859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_64
+      name: Bar_Fill_Green
       rect:
         serializedVersion: 2
         x: 71
@@ -1880,7 +1880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_65
+      name: Bar_Fill_Red
       rect:
         serializedVersion: 2
         x: 74
@@ -1901,7 +1901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_66
+      name: Bar_Small
       rect:
         serializedVersion: 2
         x: 67
