@@ -79,6 +79,13 @@ public class PlayerMovement : MonoBehaviour
         if (onGround)
         {
             canDoubleJump = true;
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isJumping", false);
+        }
+
+        else 
+        {
+            animator.SetBool("isGrounded", false);
         }
     }
 
@@ -146,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         jumpBufferTimer = 0;
+        animator.SetBool("isJumping", true);
     }
 
     void ModifyPhysics()
