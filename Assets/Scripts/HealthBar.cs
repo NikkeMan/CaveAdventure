@@ -26,16 +26,20 @@ public class HealthBar : MonoBehaviour
     }
 
     public void TakeDamage(int damageAmount) {
-        
-        for (int i = 1; i <= damageAmount; i++) {
-            healthCurrent--;
-            Debug.Log("Your current health is " + healthCurrent);
-            hearts[healthCurrent].fillAmount = 0;
+        if (healthCurrent > 0) {
+            for (int i = 1; i <= damageAmount; i++) {
+                healthCurrent--;
+                Debug.Log("Your current health is " + healthCurrent);
+                hearts[healthCurrent].fillAmount = 0;
 
-            if (healthCurrent == 0) {
-                Debug.Log("You died, lol!");
-                break;
+                if (healthCurrent == 0) {
+                    Debug.Log("You died, lol!");
+                    break;
+                }
             }
+        }
+        else {
+            Debug.Log("Stop it, he's already dead!");
         }
     }
 
