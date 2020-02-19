@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferTimer = Time.time + jumpBuffer;
         }
 
-        if (Input.GetButtonDown("Fire3") && dashCooldownTimer <= 0)
+        if (Input.GetButtonDown("Fire3") && dashCooldownTimer <= 0 && hasPUDash)
         {
             isDashButtonDown = true;
         }
