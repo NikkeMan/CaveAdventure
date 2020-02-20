@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     [SerializeField] GameObject groundCheck;
+    [SerializeField] Save save;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
@@ -17,13 +18,19 @@ public class PlayerMovement : MonoBehaviour
     bool facingRight = true;
     public bool playerInputsDisabled = false;
 
+    [Header("Attack")]
+    [SerializeField] GameObject attackBox;
+    [SerializeField] float attackCooldown = 1f;
+    float attackCooldownTimer = 0f;
+    bool isAttackButtonDown = false;
+
     [Header("Dash")]
     [SerializeField] float dashDistance = 3f;
     [SerializeField] float dashCooldown = 1f;
-    [SerializeField] float dashCooldownTimer = 1f;
+    float dashCooldownTimer = 1f;
     [SerializeField] bool dashBump = false;
-    [SerializeField] float dashBumpAmount = 20f;
-    bool hasDashed = false;
+    [SerializeField] float dashBumpAmount = 0f;
+    //bool hasDashed = false;
     bool isDashButtonDown = false;
 
     [Header("Jump")]
@@ -54,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        attackBox.SetActive(false);
+
+        hasPUDoubleJump = save.powerUpDoubleJump;
+        hasPUDash = save.powerUpDash;
     }
 
     
@@ -74,12 +85,18 @@ public class PlayerMovement : MonoBehaviour
                 isDashButtonDown = true;
             }
 
+            if (Input.GetButtonDown("Fire1") && attackCooldownTimer <= 0)
+            {
+                isAttackButtonDown = true;
+            }
+
             direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         }
 
         else
         {
             direction = new Vector2(0, 0);
+            rb.velocity = new Vector2(0, 0);
         }
 
         if (direction.x != 0 || direction.y != 0)
@@ -98,6 +115,9 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isGrounded", false);
         }
+
+
+        Attack();
     }
 
     void FixedUpdate()
@@ -121,6 +141,27 @@ public class PlayerMovement : MonoBehaviour
                     canDoubleJump = false;
                     animator.SetBool("isDoubleJumping", true);
                 }
+            }
+        }
+    }
+
+    void Attack()
+    {
+        if (attackCooldownTimer >= 0)
+        {
+            attackCooldownTimer -= Time.deltaTime;
+        }
+
+        if (isAttackButtonDown)
+        {
+            if (attackCooldownTimer <= 0)
+            {
+                animator.SetTrigger("Attack");
+                isAttackButtonDown = false;
+                attackCooldownTimer = attackCooldown;
+
+                // Actual attacking here
+                //attackBox.SetActive(true);
             }
         }
     }
