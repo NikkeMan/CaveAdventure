@@ -540,7 +540,7 @@ MonoBehaviour:
   attackCooldown: 0.3
   dashDistance: 4
   dashCooldown: 0.75
-  dashBump: 1
+  dashBump: 0
   dashBumpAmount: 0
   jumpForce: 11.5
   jumpBuffer: 0.15
@@ -553,8 +553,8 @@ MonoBehaviour:
   onGround: 0
   groundCheckLength: 0.69
   colliderOffset: {x: -0.25, y: 0, z: 0}
-  hasPUDoubleJump: 1
-  hasPUDash: 1
+  hasPUDoubleJump: 0
+  hasPUDash: 0
 --- !u!1 &690968032
 GameObject:
   m_ObjectHideFlags: 0
@@ -78686,9 +78686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20693038273d044916dcd9bd0d924d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isJumpUpgrade: 0
-  isDashUpgrade: 0
+  isJumpUpgrade: 1
+  isDashUpgrade: 1
   isHealing: 0
+  save: {fileID: 11400000, guid: 0a0cac612d9fe414f9ccc552965f77ed, type: 2}
+  pm: {fileID: 616642910}
 --- !u!1 &1735876705
 GameObject:
   m_ObjectHideFlags: 0

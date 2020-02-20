@@ -19,6 +19,9 @@ public class Save : ScriptableObject
     void NewGame()
     {
         saveLevel = 0;
+
+        // Reset health and health upgrades here
+
         //currentPlayerLocation = startingLocation;
 
         powerUpDoubleJump = false;

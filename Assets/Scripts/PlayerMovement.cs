@@ -52,8 +52,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 colliderOffset;
 
     [Header("PowerUps")]
-    [SerializeField] bool hasPUDoubleJump = false;
-    [SerializeField] bool hasPUDash = false;
+    public bool hasPUDoubleJump = false;
+    public bool hasPUDash = false;
 
     // [Header("Animation")]
 
