@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] LayerMask groundLayer;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     Animator animator;
     [SerializeField] GameObject groundCheck;
     [SerializeField] Save save;
@@ -191,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void MovePlayer(float horizontal)
+    public void MovePlayer(float horizontal)
     {
         rb.AddForce(Vector2.right * horizontal * moveSpeed);
 

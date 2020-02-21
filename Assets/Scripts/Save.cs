@@ -9,6 +9,9 @@ public class Save : ScriptableObject
     public Vector2 savePlayerLocation;
     public int saveHealth;
 
+    [Header("Defaults")]
+    public int maxHealth = 100;
+
     [Header("Progression")]
     public int saveLevel;
     public int saveScore;
@@ -26,5 +29,10 @@ public class Save : ScriptableObject
 
         powerUpDoubleJump = false;
         powerUpDash = false;
+    }
+
+    void Respawn()
+    {
+        saveHealth = maxHealth;
     }
 }

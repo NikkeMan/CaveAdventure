@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerLocation: {x: 0, y: 0}
   saveHealth: 0
+  maxHealth: 100
   saveLevel: 0
   saveScore: 0
   powerUpDoubleJump: 0
