@@ -60,6 +60,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f29b14e54882a4daa5aba5d1d895bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5836527384809575410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2316770794549078581}
+  - component: {fileID: 6227644000572726725}
+  - component: {fileID: 3983197002168582756}
+  m_Layer: 12
+  m_Name: HurtBoxCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2316770794549078581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836527384809575410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7967471708995960833}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6227644000572726725
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836527384809575410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000014901161, y: 0.2500126}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.875, y: 0.625}
+    newSize: {x: 0.875, y: 0.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6268687, y: 0.5000253}
+  m_EdgeRadius: 0
+--- !u!114 &3983197002168582756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836527384809575410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e8b4cb2799f1743961e179b7f5677e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurtBoxTimer: 1
+  hurtBoxTimerMax: 1
+  healthBar: {fileID: 0}
 --- !u!1 &7967471708026164688
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +189,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.5}
+  m_Size: {x: 0.100000024, y: 0.16372867}
   m_EdgeRadius: 0
 --- !u!114 &1428434787
 MonoBehaviour:
@@ -130,8 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde66399df6380b48b26c052e12141d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorCheckTimer: 0.5
   floorCheckTimerMax: 0.5
-  floorCheckTimerCurrent: 0.5
 --- !u!1 &7967471708995960844
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +239,7 @@ Transform:
   m_Children:
   - {fileID: 7967471708026164695}
   - {fileID: 266786546}
+  - {fileID: 2316770794549078581}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,7 +328,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000014901161, y: 0.2500126}
+  m_Offset: {x: 0, y: 0.1736633}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -265,7 +339,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6268687, y: 0.5000253}
+  m_Size: {x: 0.4, y: 0.34732667}
   m_EdgeRadius: 0
 --- !u!95 &7967471708995960839
 Animator:
@@ -301,10 +375,12 @@ MonoBehaviour:
   health: 3
   movementSpeed: 1
   jumpForce: 300
+  attackPower: 1
   AICoolDownTimer: 0.5
   AICoolDownTimerMax: 0.5
-  knockBackForce: 100
+  knockBackForce: 150
   knockBackDirX: 1
   knockBackDirY: 1
+  isFacingRight: 1
   isGrounded: 0
   animator: {fileID: 0}
