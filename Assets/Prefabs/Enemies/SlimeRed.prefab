@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266786546}
   - component: {fileID: 266786547}
-  - component: {fileID: 420128148}
+  - component: {fileID: 942575819297036606}
   m_Layer: 0
   m_Name: PlayerCheckCollider
   m_TagString: Enemy
@@ -48,7 +48,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
   m_Radius: 3
---- !u!114 &420128148
+--- !u!114 &942575819297036606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,9 +57,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 266786545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f29b14e54882a4daa5aba5d1d895bc, type: 3}
+  m_Script: {fileID: 11500000, guid: b5f8370aacc8ddd4290276d1f70a1e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentScript: {fileID: 0}
 --- !u!1 &5836527384809575410
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   hurtBoxTimer: 1
   hurtBoxTimerMax: 1
   healthBar: {fileID: 0}
+  parentScript: {fileID: 0}
 --- !u!1 &7967471708026164688
 GameObject:
   m_ObjectHideFlags: 0

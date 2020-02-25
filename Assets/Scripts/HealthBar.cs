@@ -19,9 +19,6 @@ public class HealthBar : MonoBehaviour {
         for (int i = 0; i < healthMax; i++) {
             AddHeartContainer();
         }
-
-        //Debug.Log("Your max health is " + healthMax);
-        //Debug.Log("Your current health is " + healthCurrent);
     }
 
     private void FixedUpdate() {
@@ -37,11 +34,9 @@ public class HealthBar : MonoBehaviour {
         if (healthCurrent > 0 && isVulnerable) {
             for (int i = 1; i <= damageAmount; i++) {
                 healthCurrent--;
-                //Debug.Log("Your current health is " + healthCurrent);
                 hearts[healthCurrent].fillAmount = 0;
 
                 if (healthCurrent == 0) {
-                    Debug.Log("You died, lol!");
                     break;
                 }
             }
@@ -59,10 +54,8 @@ public class HealthBar : MonoBehaviour {
             for (int i = 1; i <= healAmount; i++) {
                 hearts[healthCurrent].fillAmount = 1;
                 healthCurrent++;
-                //Debug.Log("Your current health is " + healthCurrent);
 
                 if (healthCurrent == healthMax) {
-                    //Debug.Log("MAX HEALTH WOW");
                     break;
                 }
             }
@@ -75,7 +68,6 @@ public class HealthBar : MonoBehaviour {
     public void IncreaseMaxHealth(int increaseAmount) {
         healthMax += increaseAmount;
         AddHeartContainer();
-        //Debug.Log("Your max health is now " + healthMax);
         Heal(healthMax);
     }
 

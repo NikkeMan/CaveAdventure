@@ -1,14 +1,22 @@
 ﻿using UnityEngine;
 
 public class HurtBox : MonoBehaviour {
-    [SerializeField] private float hurtBoxTimer = 1.0f;
-    [SerializeField] private float hurtBoxTimerMax = 1.0f;
-    [SerializeField] private HealthBar healthBar;
-    private Slime slime;
+    [SerializeField] float hurtBoxTimer = 1.0f;
+    [SerializeField] float hurtBoxTimerMax = 1.0f;
+    HealthBar healthBar;
+    Component parentScript;
+    int attackPower;
 
-    // Start is called before the first frame update
     private void Start() {
-        slime = transform.parent.GetComponent<Slime>();
+        //slime = transform.parent.GetComponent<Slime>();
+        if (transform.parent.name.StartsWith("SlimeRed") || transform.parent.name.StartsWith("SlimeBlack")) {
+            parentScript = transform.parent.GetComponent<Slime>();
+            attackPower = parentScript.GetComponent<Slime>().attackPower;
+        }
+        else if (transform.parent.name.StartsWith("BatRed") || transform.parent.name.StartsWith("BatBlack")) {
+            parentScript = transform.parent.GetComponent<Bat>();
+            attackPower = parentScript.GetComponent<Bat>().attackPower;
+        }
         healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
     }
 
@@ -23,8 +31,8 @@ public class HurtBox : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
-            healthBar.TakeDamage(slime.attackPower);
-            slime.KnockBack();
+            healthBar.TakeDamage(attackPower);
+            parentScript.SendMessage("KnockBack");
             GetComponent<BoxCollider2D>().enabled = false;
             hurtBoxTimer = 0;
         }

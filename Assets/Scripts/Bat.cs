@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-public class Slime : MonoBehaviour {
+public class Bat : MonoBehaviour {
 
     [Header("Stats")]
     [SerializeField] private int health = 3;
     [SerializeField] private float movementSpeed = 1.5f;
-    [SerializeField] private float jumpForce = 100f;
     public int attackPower = 1;
+    public float attackSpeedMult = 3.0f;
 
     [Header("AI")]
     [SerializeField] private float AICoolDownTimer = 0.5f;
@@ -19,8 +19,8 @@ public class Slime : MonoBehaviour {
 
     [Header("Other")]
     [SerializeField] private bool isFacingRight = true;
-    [SerializeField] public bool isGrounded = true;
     [SerializeField] public Animator animator;
+
     private Rigidbody2D rigidBody;
     private float velocityThreshold = 0.1f;
     private GameObject player;
@@ -36,17 +36,17 @@ public class Slime : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        if (AICoolDownTimer >= AICoolDownTimerMax && isGrounded) {
+        if (AICoolDownTimer >= AICoolDownTimerMax) {
             Move();
         }
-        else if (AICoolDownTimer < AICoolDownTimerMax && isGrounded) {
+        else if (AICoolDownTimer < AICoolDownTimerMax) {
             AICoolDownTimer += Time.deltaTime;
         }
     }
 
     private void Move() {
-        animator.SetBool("isAttacking", false);
-        attackRange.enabled = true;
+        //animator.SetBool("isAttacking", false);
+        //attackRange.enabled = true;
 
         // Sometimes the enemy gets stuck when facing a wall and velocity is not 0, that's why we use a threshold (for example -0.1 < velocity < +0.1)
         if (rigidBody.velocity.x >= -velocityThreshold && rigidBody.velocity.x <= velocityThreshold) {
@@ -54,11 +54,19 @@ public class Slime : MonoBehaviour {
             TurnAround();
         }
 
-        if (isFacingRight) {
-            rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
+        if (animator.GetBool("isAttacking")) {
+            //calculate attack direction:
+            Vector2 playerDirection = CalculateAttackDirection(player.transform.position, transform.position);
+            rigidBody.velocity = new Vector2(playerDirection.x * attackSpeedMult, playerDirection.y * attackSpeedMult);
         }
-        else {
-            rigidBody.velocity = new Vector2(-movementSpeed, rigidBody.velocity.y);
+
+        if (!animator.GetBool("isAttacking")) {
+            if (isFacingRight) {
+                rigidBody.velocity = new Vector2(movementSpeed, 0);
+            }
+            else {
+                rigidBody.velocity = new Vector2(-movementSpeed, 0);
+            }
         }
     }
 
@@ -68,8 +76,6 @@ public class Slime : MonoBehaviour {
     }
 
     public void Attack() {
-        rigidBody.velocity = Vector2.zero;
-        Vector2 jumpDirection = Vector2.zero;
         animator.SetBool("isAttacking", true);
         attackRange.enabled = false;
 
@@ -85,17 +91,12 @@ public class Slime : MonoBehaviour {
                 TurnAround();
             }
         }
-        jumpDirection = CalculateJumpDirection(player.transform.position, transform.position);
-
-        rigidBody.AddForce(jumpDirection * jumpForce);
-        AICoolDownTimer = 0;
     }
 
-    // Calculates the jumpDirection based on the direction the player is at:
-    private Vector2 CalculateJumpDirection(Vector3 pos1, Vector3 pos2) {
+    // Calculates the normalized playerDirection:
+    private Vector2 CalculateAttackDirection(Vector3 pos1, Vector3 pos2) {
         Vector2 playerDirection = new Vector2(pos1.x - pos2.x, pos1.y - pos2.y).normalized;
-        Vector2 jumpDirection = new Vector2(playerDirection.x / 2, (playerDirection.y + 1) / 2);
-        return jumpDirection;
+        return playerDirection;
     }
 
     public void TakeDamage(int damage) {

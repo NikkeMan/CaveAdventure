@@ -1,19 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCheck : MonoBehaviour {
-    Slime slime;
+    public Component parentScript;
 
-    void Start()
-    {
-        slime = transform.parent.GetComponent<Slime>();
+    private void Start() {
+        if (transform.parent.name.StartsWith("SlimeRed") || transform.parent.name.StartsWith("SlimeBlack")) {
+            parentScript = transform.parent.GetComponent<Slime>();
+        }
+        else if (transform.parent.name.StartsWith("BatRed") || transform.parent.name.StartsWith("BatBlack")) {
+            parentScript = transform.parent.GetComponent<Bat>();
+        }
     }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
-            Debug.Log("Player entered area! Time to strike!");
-            slime.Attack();
+            parentScript.SendMessage("Attack");
         }
     }
 }
