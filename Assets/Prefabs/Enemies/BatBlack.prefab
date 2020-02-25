@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 7279250248218852913}
   m_Layer: 12
   m_Name: HurtBoxCollider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,5 +310,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtBoxTimer: 1
   hurtBoxTimerMax: 1
-  healthBar: {fileID: 0}
-  parentScript: {fileID: 0}

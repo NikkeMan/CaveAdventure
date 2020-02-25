@@ -422,8 +422,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -54189691
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7795,7 +7795,7 @@ RectTransform:
   - {fileID: 18475634}
   - {fileID: 779614332}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8506,6 +8506,7 @@ GameObject:
   - component: {fileID: 879330577}
   - component: {fileID: 879330576}
   - component: {fileID: 879330575}
+  - component: {fileID: 879330580}
   m_Layer: 14
   m_Name: Lava
   m_TagString: Untagged
@@ -8540,7 +8541,7 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
 --- !u!66 &879330576
@@ -8557,32 +8558,32 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 879330575}
     m_ColliderPaths:
     - - X: -130000000
-        Y: -60000000
+        Y: -65000000
       - X: -130000000
-        Y: -90000000
+        Y: -95000000
       - X: 150000000
-        Y: -90000000
+        Y: -95000000
       - X: 150000000
-        Y: -20000000
+        Y: -25000000
       - X: 70000000
-        Y: -20000000
+        Y: -25000000
       - X: 70000000
-        Y: -60000000
+        Y: -65000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 14.999971, y: -9}
-      - {x: 14.999971, y: -2}
-      - {x: 7, y: -2.0000293}
-      - {x: 6.9999704, y: -6}
-      - {x: -13, y: -6.000029}
-      - {x: -12.99997, y: -9}
+    - - {x: 14.999971, y: -9.5}
+      - {x: 14.999971, y: -2.5}
+      - {x: 7, y: -2.5000293}
+      - {x: 6.9999704, y: -6.5}
+      - {x: -13, y: -6.500029}
+      - {x: -12.99997, y: -9.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &879330577
@@ -8642,9 +8643,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1979150887
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -10045,6 +10046,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &879330580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879330573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3855d6ed08e42b640ba7800d86e0fba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurtBoxTimer: 1
+  hurtBoxTimerMax: 1
+  tileMapCollider: {fileID: 0}
 --- !u!1001 &1025113116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10095,7 +10111,7 @@ PrefabInstance:
     - target: {fileID: 5401927876843435622, guid: 03c20edc2c1d9674d9d9019f6bea5ca6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5401927876843435622, guid: 03c20edc2c1d9674d9d9019f6bea5ca6,
         type: 3}
@@ -10205,6 +10221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlimeRed (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967471708995960844, guid: c37cf8cf751b0d04abb82fa3b36ab4c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37cf8cf751b0d04abb82fa3b36ab4c5, type: 3}
@@ -10433,9 +10454,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 340790691
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -14568,6 +14589,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BatBlack (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3107994865440889517, guid: 213412620fb4dbf4986c2adcb3436a4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3107994865440889518, guid: 213412620fb4dbf4986c2adcb3436a4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14622,6 +14648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178152677785076839, guid: 213412620fb4dbf4986c2adcb3436a4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213412620fb4dbf4986c2adcb3436a4f, type: 3}
@@ -14789,6 +14820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeRed
       objectReference: {fileID: 0}
+    - target: {fileID: 7967471708995960844, guid: c37cf8cf751b0d04abb82fa3b36ab4c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37cf8cf751b0d04abb82fa3b36ab4c5, type: 3}
 --- !u!1001 &1438741246
@@ -14857,6 +14893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlimeRed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967471708995960844, guid: c37cf8cf751b0d04abb82fa3b36ab4c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37cf8cf751b0d04abb82fa3b36ab4c5, type: 3}
@@ -15302,7 +15343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1951979960
 GameObject:
@@ -15657,6 +15698,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BatBlack
       objectReference: {fileID: 0}
+    - target: {fileID: 3107994865440889517, guid: 213412620fb4dbf4986c2adcb3436a4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3107994865440889518, guid: 213412620fb4dbf4986c2adcb3436a4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15711,6 +15757,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178152677785076839, guid: 213412620fb4dbf4986c2adcb3436a4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213412620fb4dbf4986c2adcb3436a4f, type: 3}
