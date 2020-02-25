@@ -8,6 +8,7 @@ TagManager:
   - PowerUp
   - PowerUpJump
   - Enemy
+  - PlayerAttackBox
   layers:
   - Default
   - TransparentFX
@@ -20,14 +21,14 @@ TagManager:
   - 
   - 
   - Player
-  - PlayerAttack
+  - PlayerAttackBox
   - Enemy
   - Ground
   - Lava
   - Background
   - 
   - 
-  - 
+  - PlayerTrigger
   - 
   - 
   - 

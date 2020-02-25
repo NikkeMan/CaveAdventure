@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 directionMemory;
     bool facingRight = true;
     public bool playerInputsDisabled = false;
+    [SerializeField] float maxFallSpeed = -20f;
 
     [Header("Attack")]
     [SerializeField] GameObject attackBox;
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        attackBox.SetActive(false);
+        //attackBox.SetActive(false);
 
         hasPUDoubleJump = save.powerUpDoubleJump;
         hasPUDash = save.powerUpDash;
@@ -143,6 +144,11 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        if (rb.velocity.y <= maxFallSpeed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, maxFallSpeed);
+        }
     }
 
     void Attack()
@@ -152,6 +158,11 @@ public class PlayerMovement : MonoBehaviour
             attackCooldownTimer -= Time.deltaTime;
         }
 
+        else
+        {
+            attackBox.SetActive(false);
+        }
+
         if (isAttackButtonDown)
         {
             if (attackCooldownTimer <= 0)
@@ -159,6 +170,8 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetTrigger("Attack");
                 isAttackButtonDown = false;
                 attackCooldownTimer = attackCooldown;
+
+                attackBox.SetActive(true);
 
                 // Actual attacking here
                 //attackBox.SetActive(true);
