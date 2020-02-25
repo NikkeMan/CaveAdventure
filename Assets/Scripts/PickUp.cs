@@ -8,18 +8,19 @@ public class PickUp : MonoBehaviour
     [SerializeField] bool isJumpUpgrade = false;
     [SerializeField] bool isDashUpgrade = false;
     [SerializeField] bool isHealing = false;
-    [SerializeField] Save save;
-    [SerializeField] PlayerMovement pm;
-    
+    [SerializeField] DataLinker dataLinker;
+    private Save save;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
+
         if (other.gameObject.CompareTag("Player"))
         {
             if (isJumpUpgrade)
             {
-                //save.powerUpDoubleJump = true;
-                pm.hasPUDoubleJump = true;
+                //dataLinker.saveFile.powerUpDoubleJump = true;
+                dataLinker.playerMovement.hasPUDoubleJump = true;
             }
         }
 
@@ -27,8 +28,8 @@ public class PickUp : MonoBehaviour
         {
             if (isDashUpgrade)
             {
-                //save.powerUpDash = true;
-                pm.hasPUDash = true;
+                //dataLinker.saveFile.powerUpDash = true;
+                dataLinker.playerMovement.hasPUDash = true;
             }
         }
 
