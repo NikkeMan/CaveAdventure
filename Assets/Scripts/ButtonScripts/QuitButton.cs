@@ -6,6 +6,7 @@ public class QuitButton : MonoBehaviour
 {
     public void ClickQuit()
     {
+        Time.timeScale = 1;
         Application.Quit();
     }
 }
