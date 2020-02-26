@@ -65,7 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Double Jump Unlocked!
+  m_text: 'Double Jump Unlocked!
+
+
+    Press ''Space'' midair to jump again!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d79bb255e614f75408bce198f98876ea, type: 2}
   m_sharedMaterial: {fileID: 2419944178063970759, guid: d79bb255e614f75408bce198f98876ea,
@@ -189,4 +192,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc7f27359113664789608d89a04624a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 3
+  destroyDelay: 5
