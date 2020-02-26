@@ -8,4 +8,5 @@ public class DataLinker : MonoBehaviour
     public Save saveFile;
     public PlayerMovement playerMovement;
     public GameObject playerRef;
+    public PopUpScript popUpScript;
 }

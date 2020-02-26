@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //attackBox.SetActive(false);
 
         hasPUDoubleJump = save.powerUpDoubleJump;
         hasPUDash = save.powerUpDash;
@@ -172,9 +171,6 @@ public class PlayerMovement : MonoBehaviour
                 attackCooldownTimer = attackCooldown;
 
                 attackBox.SetActive(true);
-
-                // Actual attacking here
-                //attackBox.SetActive(true);
             }
         }
     }
@@ -190,7 +186,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (dashCooldownTimer <= 0)
             {
-                //rb.velocity = new Vector2(0, 0);
                 rb.MovePosition(new Vector2(transform.position.x, transform.position.y) + new Vector2(directionMemory.x, 0) * dashDistance);
 
                 if (dashBump)

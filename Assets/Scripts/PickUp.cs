@@ -20,12 +20,14 @@ public class PickUp : MonoBehaviour
             {
                 //dataLinker.saveFile.powerUpDoubleJump = true;
                 dataLinker.playerMovement.hasPUDoubleJump = true;
+                dataLinker.popUpScript.ShowDoubleJumpPopUp();
             }
 
             if (isDashUpgrade)
             {
                 //dataLinker.saveFile.powerUpDash = true;
                 dataLinker.playerMovement.hasPUDash = true;
+                dataLinker.popUpScript.ShowDashPopUp();
             }
 
             if (isHealthUpgrade)

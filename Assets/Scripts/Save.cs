@@ -15,6 +15,8 @@ public class Save : ScriptableObject
     [Header("Progression")]
     public int saveLevel;
     public int saveScore;
+    public float saveTimer;
+    public int healthUpgrades;
     public bool powerUpDoubleJump;
     public bool powerUpDash;
 
@@ -25,7 +27,7 @@ public class Save : ScriptableObject
 
         // Reset health and health upgrades here
 
-        //currentPlayerLocation = startingLocation;
+        // Set player Location to default level 1
 
         powerUpDoubleJump = false;
         powerUpDash = false;
