@@ -133,8 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtBoxTimer: 1
   hurtBoxTimerMax: 1
-  healthBar: {fileID: 0}
-  parentScript: {fileID: 0}
 --- !u!1 &7967471708026164688
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   movementSpeed: 1
-  jumpForce: 300
+  jumpForce: 400
   attackPower: 1
   AICoolDownTimer: 0.5
   AICoolDownTimerMax: 0.5
@@ -386,3 +384,5 @@ MonoBehaviour:
   isFacingRight: 1
   isGrounded: 0
   animator: {fileID: 0}
+  itemDrop: {fileID: 5590801384697165417, guid: 15aaa3624fa58e54facc68deccc26271,
+    type: 3}

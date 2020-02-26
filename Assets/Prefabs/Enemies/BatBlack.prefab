@@ -228,16 +228,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  movementSpeed: 2
+  movementSpeed: 2.5
   attackPower: 2
   attackSpeedMult: 3
   AICoolDownTimer: 0.5
   AICoolDownTimerMax: 0.5
-  knockBackForce: 200
+  knockBackForce: 150
   knockBackDirX: 1
   knockBackDirY: 1
   isFacingRight: 1
   animator: {fileID: 0}
+  itemDrop: {fileID: 5590801384697165417, guid: 15aaa3624fa58e54facc68deccc26271,
+    type: 3}
 --- !u!1 &7178152677785076839
 GameObject:
   m_ObjectHideFlags: 0
