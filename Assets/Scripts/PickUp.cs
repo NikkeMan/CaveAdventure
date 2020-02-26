@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     [Header("PickUp properties")]
     [SerializeField] bool isJumpUpgrade = false;
     [SerializeField] bool isDashUpgrade = false;
+    [SerializeField] bool isHealthUpgrade = false;
     [SerializeField] bool isHealing = false;
     [SerializeField] DataLinker dataLinker;
     private Save save;
@@ -20,22 +21,24 @@ public class PickUp : MonoBehaviour
                 //dataLinker.saveFile.powerUpDoubleJump = true;
                 dataLinker.playerMovement.hasPUDoubleJump = true;
             }
-        }
 
-        if (other.gameObject.CompareTag("Player"))
-        {
             if (isDashUpgrade)
             {
                 //dataLinker.saveFile.powerUpDash = true;
                 dataLinker.playerMovement.hasPUDash = true;
             }
-        }
 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            // Check and Healing effect goes here
-        }
+            if (isHealthUpgrade)
+            {
+                // Health Upgrade effect goes here
+            }
 
-        Destroy(gameObject);
+            if (isHealing)
+            {
+                // Healing effect goes here
+            }
+
+            Destroy(gameObject);
+        }
     }
 }
