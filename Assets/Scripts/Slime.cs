@@ -25,6 +25,7 @@ public class Slime : MonoBehaviour {
     private float velocityThreshold = 0.1f;
     private GameObject player;
     private CircleCollider2D attackRange;
+    public GameObject itemDrop;
 
     private void Start() {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -128,6 +129,7 @@ public class Slime : MonoBehaviour {
     }
 
     private void Die() {
+        Object.Instantiate(itemDrop, transform.position, Quaternion.identity);
         Object.Destroy(this.gameObject);
     }
 }

@@ -11,7 +11,6 @@ public class HealthBar : MonoBehaviour {
     public GameObject heartContainer;
     public List<Image> hearts;
 
-    // Start is called before the first frame update
     private void Start() {
         healthCurrent = healthMax;
         hearts = new List<Image>();

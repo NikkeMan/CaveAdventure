@@ -8,7 +8,6 @@ public class HurtBox : MonoBehaviour {
     int attackPower;
 
     private void Start() {
-        //slime = transform.parent.GetComponent<Slime>();
         if (transform.parent.name.StartsWith("SlimeRed") || transform.parent.name.StartsWith("SlimeBlack")) {
             parentScript = transform.parent.GetComponent<Slime>();
             attackPower = parentScript.GetComponent<Slime>().attackPower;
@@ -35,6 +34,12 @@ public class HurtBox : MonoBehaviour {
             parentScript.SendMessage("KnockBack");
             GetComponent<BoxCollider2D>().enabled = false;
             hurtBoxTimer = 0;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("PlayerAttackBox")) {
+            parentScript.SendMessage("TakeDamage", 1);
         }
     }
 }

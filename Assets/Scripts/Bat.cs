@@ -20,11 +20,11 @@ public class Bat : MonoBehaviour {
     [Header("Other")]
     [SerializeField] private bool isFacingRight = true;
     [SerializeField] public Animator animator;
-
     private Rigidbody2D rigidBody;
     private float velocityThreshold = 0.1f;
     private GameObject player;
     private CircleCollider2D attackRange;
+    public GameObject itemDrop;
 
     private void Start() {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -45,9 +45,6 @@ public class Bat : MonoBehaviour {
     }
 
     private void Move() {
-        //animator.SetBool("isAttacking", false);
-        //attackRange.enabled = true;
-
         // Sometimes the enemy gets stuck when facing a wall and velocity is not 0, that's why we use a threshold (for example -0.1 < velocity < +0.1)
         if (rigidBody.velocity.x >= -velocityThreshold && rigidBody.velocity.x <= velocityThreshold) {
             // Is against a wall, turn around:
@@ -129,6 +126,7 @@ public class Bat : MonoBehaviour {
     }
 
     private void Die() {
+        Object.Instantiate(itemDrop, transform.position, Quaternion.identity);
         Object.Destroy(this.gameObject);
     }
 }

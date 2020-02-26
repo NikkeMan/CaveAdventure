@@ -11,6 +11,11 @@ public class PickUp : MonoBehaviour
     [SerializeField] bool isHealing = false;
     [SerializeField] DataLinker dataLinker;
     private Save save;
+    HealthBar healthBar;
+
+    private void Start() {
+        healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,12 +35,13 @@ public class PickUp : MonoBehaviour
 
             if (isHealthUpgrade)
             {
-                // Health Upgrade effect goes here
+                healthBar.IncreaseMaxHealth(1);
             }
 
             if (isHealing)
             {
-                // Healing effect goes here
+                healthBar.Heal(1);
+
             }
 
             Destroy(gameObject);
