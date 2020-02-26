@@ -477,7 +477,7 @@ MonoBehaviour:
   iFrames: 1
   iFramesMax: 1
   isVulnerable: 1
-  heartContainer: {fileID: 835006980473645310, guid: 24bdd5d8e58cc9045ae96095c0881540,
+  heartContainer: {fileID: 835006980473645310, guid: 6aee88a7e38dbc64ca94fb41fcec11b8,
     type: 3}
   hearts: []
 --- !u!1 &7932034712597060117
@@ -1054,7 +1054,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1466,7 +1466,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

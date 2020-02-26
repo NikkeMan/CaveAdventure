@@ -22,7 +22,6 @@ public class Score : MonoBehaviour
     }
 
     void OnScoreChanged() {
-        //scoreText.text = "Score: " + currentScore.ToString("D9");
         scoreText.text = currentScore.ToString("D9");
     }
 }

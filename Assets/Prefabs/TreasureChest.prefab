@@ -132,4 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAmount: 500
-  hasKey: 1
+  hasKey: 0
