@@ -47,3 +47,4 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   playerRef: {fileID: 0}
   popUpScript: {fileID: 0}
+  checkPointRef: {fileID: 0}

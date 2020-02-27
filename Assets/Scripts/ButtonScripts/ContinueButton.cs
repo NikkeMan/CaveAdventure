@@ -19,7 +19,7 @@ public class ContinueButton : MonoBehaviour
             sceneToLoad = 0;
         }
 
-        if (sceneToLoad == 0)
+        if (!save.isContinued)
         {
             gameObject.SetActive(false);
         }

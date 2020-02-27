@@ -12,10 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd32eb649473b1439fd755bdc3843c0, type: 3}
   m_Name: Save
   m_EditorClassIdentifier: 
-  savePlayerLocation: {x: 0, y: 0}
-  saveHealth: 0
-  maxHealth: 100
+  isContinued: 1
+  saveHealthCurrent: 4
   saveLevel: 1
-  saveScore: 0
+  saveCheckpoint: 1
+  saveScore: 1000
+  saveTimer: 0
+  saveHealthMax: 4
   powerUpDoubleJump: 0
   powerUpDash: 0
+  saveHealthDefault: 3
+  saveLevelDefault: 1
+  saveCheckpointDefault: 1
+  saveScoreDefault: 0
+  saveTimerDefault: 0
+  saveHealthMaxDefault: 3
+  powerUpDoubleJumpDefault: 0
+  powerUpDashDefault: 0

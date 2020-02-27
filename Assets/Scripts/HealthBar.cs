@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
-    [SerializeField] private int healthMax;
-    [SerializeField] private int healthCurrent;
+    // Changed healthMax and healthCurrent to public
+    public int healthMax;
+    public int healthCurrent;
     [SerializeField] private float iFrames = 1.0f;
     [SerializeField] private float iFramesMax = 1.0f;
     [SerializeField] public bool isVulnerable = true;

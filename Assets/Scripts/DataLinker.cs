@@ -9,4 +9,5 @@ public class DataLinker : MonoBehaviour
     public PlayerMovement playerMovement;
     public GameObject playerRef;
     public PopUpScript popUpScript;
+    public CheckPoint checkPointRef;
 }

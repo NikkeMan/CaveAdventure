@@ -1,19 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class NewGameButton : MonoBehaviour
+public class SaveLoader : MonoBehaviour
 {
     [SerializeField] DataLinker dataLinker;
-
-    private void Start()
+    private void Awake()
     {
         dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
-    }
 
-    public void NewGameClick()
-    {
-        dataLinker.saveFile.NewGame();
+        dataLinker.checkPointRef.CheckPointLoad();
     }
 }
