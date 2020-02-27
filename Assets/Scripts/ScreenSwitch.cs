@@ -5,8 +5,8 @@ using UnityEngine;
 public class ScreenSwitch : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] GameObject fromCamera;
-    [SerializeField] GameObject toCamera;
+    [SerializeField] GameObject leftCamera;
+    [SerializeField] GameObject rightCamera;
     [SerializeField] DataLinker dataLinker;
     [SerializeField] GameObject player;
     [SerializeField] Animator playerAnimator;
@@ -19,7 +19,7 @@ public class ScreenSwitch : MonoBehaviour
     private void Start()
     {
         timer = moveTime;
-        toCamera.SetActive(false);
+        rightCamera.SetActive(false);
 
         playerAnimator = dataLinker.playerRef.gameObject.GetComponent<Animator>();
     }
@@ -37,10 +37,10 @@ public class ScreenSwitch : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (fromCamera.activeSelf)
+            if (leftCamera.activeSelf)
             {
-                fromCamera.SetActive(false);
-                toCamera.SetActive(true);
+                leftCamera.SetActive(false);
+                rightCamera.SetActive(true);
                 direction = 1;
                 timer = moveTime;
 
@@ -49,8 +49,8 @@ public class ScreenSwitch : MonoBehaviour
 
             else
             {
-                fromCamera.SetActive(true);
-                toCamera.SetActive(false);
+                leftCamera.SetActive(true);
+                rightCamera.SetActive(false);
                 direction = -1;
 
                 transitioning = true;
