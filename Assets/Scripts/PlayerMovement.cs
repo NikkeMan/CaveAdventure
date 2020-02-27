@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     [SerializeField] GameObject groundCheck;
     [SerializeField] Save save;
+    [SerializeField] HealthBar healthBar;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
@@ -118,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         Attack();
+        CheckTakingDamage();
     }
 
     void FixedUpdate()
@@ -263,6 +265,21 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
         //transform.rotation = Quaternion.Euler(0, facingRight ? 0 : 180, 0);
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+    }
+
+    void CheckTakingDamage()
+    {
+        if (!healthBar.isVulnerable)
+        {
+            animator.SetBool("TakingDamage", true);
+            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 1);
+        }
+
+        else
+        {
+            animator.SetBool("TakingDamage", false);
+            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 0);
+        }
     }
 
     private void OnDrawGizmos()
