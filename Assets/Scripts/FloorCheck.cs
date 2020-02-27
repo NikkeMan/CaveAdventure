@@ -20,14 +20,14 @@ public class FloorCheck : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Ground") && !slime.isGrounded) {
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Ground") && !slime.isGrounded ) {
             // Landed on ground:
             slime.isGrounded = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
+        private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.CompareTag("Ground")) {
             // No longer touching ground:
             if (slime.animator.GetBool("isAttacking") == true) {

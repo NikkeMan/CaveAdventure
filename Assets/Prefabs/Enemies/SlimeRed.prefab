@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 5
 --- !u!114 &942575819297036606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000014901161, y: 0.2500126}
+  m_Offset: {x: 0.000000014901161, y: 0.37389457}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6268687, y: 0.5000253}
+  m_Size: {x: 0.6268687, y: 0.74778914}
   m_EdgeRadius: 0
 --- !u!114 &3983197002168582756
 MonoBehaviour:
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7967471708026164695}
   - component: {fileID: 7967471708026164694}
   - component: {fileID: 1428434787}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FloorCheckCollider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.365, y: 0}
+  m_Offset: {x: 0.13, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -280,7 +280,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 340790691
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7686511047796825374, guid: 845078e4d2b7c854c86255b7edf415eb,
     type: 3}
@@ -378,7 +378,7 @@ MonoBehaviour:
   attackPower: 1
   AICoolDownTimer: 0.5
   AICoolDownTimerMax: 0.5
-  knockBackForce: 150
+  knockBackForce: 100
   knockBackDirX: 1
   knockBackDirY: 1
   isFacingRight: 1
