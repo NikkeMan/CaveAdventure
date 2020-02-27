@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour {
     [SerializeField] private int healthCurrent;
     [SerializeField] private float iFrames = 1.0f;
     [SerializeField] private float iFramesMax = 1.0f;
-    [SerializeField] private bool isVulnerable = true;
+    [SerializeField] public bool isVulnerable = true;
     public GameObject heartContainer;
     public List<Image> hearts;
 
