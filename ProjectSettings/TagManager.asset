@@ -49,11 +49,11 @@ TagManager:
   - name: Background
     uniqueID: 4240777605
     locked: 0
-  - name: Lava
-    uniqueID: 1979150887
-    locked: 0
   - name: Ground
     uniqueID: 340790691
+    locked: 0
+  - name: Lava
+    uniqueID: 1979150887
     locked: 0
   - name: Foreground
     uniqueID: 1894148995

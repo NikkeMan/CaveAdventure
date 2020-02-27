@@ -68,12 +68,26 @@ public class ScreenSwitch : MonoBehaviour
             dataLinker.playerMovement.MovePlayer(direction);
 
             dataLinker.playerMovement.playerInputsDisabled = true;
+            ToggleZoneRight();
         }
 
         else
         {
             transitioning = false;
             dataLinker.playerMovement.playerInputsDisabled = false;
+
+            ToggleZoneLeft();
+
         }
+    }
+
+    void ToggleZoneLeft()
+    {
+
+    }
+
+    void ToggleZoneRight()
+    {
+
     }
 }
