@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3177116371806006567}
   - component: {fileID: 3177116371806006566}
-  - component: {fileID: 3177116371806006565}
   - component: {fileID: 3177116371806006564}
   - component: {fileID: 3177116371806006563}
+  - component: {fileID: 100278756897641474}
+  - component: {fileID: 2632248770484630384}
   m_Layer: 8
   m_Name: PowerUpDash
   m_TagString: PowerUpJump
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1894148995
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2e7197f9f1945c14ba68b61074e96487, type: 3}
   m_Color: {r: 0.5660378, g: 0.52956, b: 0.16820933, a: 1}
@@ -84,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &3177116371806006565
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3177116371806006562}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.004995823, y: 0.0049962997}
-  m_Size: {x: 0.7901516, y: 0.830122}
-  m_Direction: 0
 --- !u!95 &3177116371806006564
 Animator:
   serializedVersion: 3
@@ -131,8 +116,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20693038273d044916dcd9bd0d924d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInstantiated: 1
+  spawnBump: 150
+  cooldownOnInstantiate: 1
+  pickUpCooldown: 1
   isJumpUpgrade: 0
   isDashUpgrade: 1
   isHealthUpgrade: 0
   isHealing: 0
   dataLinker: {fileID: 0}
+--- !u!58 &100278756897641474
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177116371806006562}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &2632248770484630384
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177116371806006562}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

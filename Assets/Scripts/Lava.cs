@@ -18,19 +18,19 @@ public class Lava : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (hurtBoxTimer < hurtBoxTimerMax) {
-            hurtBoxTimer += Time.deltaTime;
-        }
-        if (hurtBoxTimer >= hurtBoxTimerMax && tileMapCollider.isActiveAndEnabled == false) {
-            tileMapCollider.enabled = true;
-        }
+        //if (hurtBoxTimer < hurtBoxTimerMax) {
+        //    hurtBoxTimer += Time.fixedDeltaTime;
+        //}
+        //if (hurtBoxTimer >= hurtBoxTimerMax && !tileMapCollider.isActiveAndEnabled) {
+        //    tileMapCollider.enabled = true;
+        //}
     }
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             healthBar.TakeDamage(damageAmount);
-            tileMapCollider.enabled = false;
-            hurtBoxTimer = 0;
+            //tileMapCollider.enabled = false;
+            //hurtBoxTimer = 0;
         }
     }
 }

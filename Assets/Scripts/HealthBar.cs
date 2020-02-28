@@ -23,17 +23,29 @@ public class HealthBar : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate() {
-        if (iFrames < iFramesMax && !isVulnerable) {
+    private void Update() {
+        if (iFrames <= iFramesMax && !isVulnerable) {
             iFrames += Time.deltaTime;
         }
-        else if (iFrames >= iFramesMax) {
+        else if (iFrames > iFramesMax) {
             isVulnerable = true;
         }
     }
 
+    //private void FixedUpdate() {
+    //    if (iFrames < iFramesMax && !isVulnerable) {
+    //        iFrames += Time.fixedDeltaTime;
+    //    }
+    //    else if (iFrames >= iFramesMax) {
+    //        isVulnerable = true;
+    //    }
+    //}
+
     public void TakeDamage(int damageAmount) {
         if (healthCurrent > 0 && isVulnerable) {
+            iFrames = 0;
+            isVulnerable = false;
+
             for (int i = 1; i <= damageAmount; i++) {
                 healthCurrent--;
                 hearts[healthCurrent].fillAmount = 0;
@@ -48,9 +60,6 @@ public class HealthBar : MonoBehaviour {
         else {
             //Debug.Log("Stop it, he's already dead!");
         }
-
-        isVulnerable = false;
-        iFrames = 0;
     }
 
     public void Heal(int healAmount) {
