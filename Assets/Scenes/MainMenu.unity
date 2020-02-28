@@ -560,7 +560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -138.3, y: 54.30005}
+  m_AnchoredPosition: {x: -138.29999, y: 54.30005}
   m_SizeDelta: {x: 214.3, y: 32.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850491089
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cacf8ec59db634c82788d7f9cf610c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 3
+  sceneToLoad: 2
 --- !u!1 &979012589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,8 +1498,8 @@ Canvas:
   m_GameObject: {fileID: 1856562692}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 144800898}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -2342,7 +2342,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 144800898}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1

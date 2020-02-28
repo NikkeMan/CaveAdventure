@@ -26,10 +26,14 @@ public class TreasureChest : MonoBehaviour
             score.AddToScore(scoreAmount);
             animator.SetBool("isOpen", true);
 
-            for (int i = 0; i < itemsToSpawn; i++)
+            if (inventoryItem != null)
             {
-                Instantiate(inventoryItem, transform.position, Quaternion.identity);
+                for (int i = 0; i < itemsToSpawn; i++)
+                {
+                    Instantiate(inventoryItem, transform.position, Quaternion.identity);
+                }
             }
+            
 
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
