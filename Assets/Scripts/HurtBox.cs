@@ -8,7 +8,7 @@ public class HurtBox : MonoBehaviour {
     int attackPower;
 
     private void Start() {
-        if (transform.parent.name.StartsWith("SlimeRed") || transform.parent.name.StartsWith("SlimeBlack")) {
+        if (transform.parent.name.StartsWith("SlimeRed") || transform.parent.name.StartsWith("SlimeBlack") || transform.parent.name.StartsWith("SlimeBoss")) {
             parentScript = transform.parent.GetComponent<Slime>();
             attackPower = parentScript.GetComponent<Slime>().attackPower;
         }
