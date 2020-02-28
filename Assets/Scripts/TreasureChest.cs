@@ -9,17 +9,28 @@ public class TreasureChest : MonoBehaviour
     Score score;
     Animator animator;
 
+    [SerializeField] DataLinker dataLinker;
+    [SerializeField] GameObject inventoryItem;
+    [SerializeField] int itemsToSpawn = 1;
+
     // Start is called before the first frame update
     void Start()
     {
         score = GameObject.Find("ScorePanel").GetComponent<Score>();
         animator = GetComponent<Animator>();
+        dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
+        if(other.CompareTag("PlayerAttackBox")) {
             score.AddToScore(scoreAmount);
             animator.SetBool("isOpen", true);
+
+            for (int i = 0; i < itemsToSpawn; i++)
+            {
+                Instantiate(inventoryItem, transform.position, Quaternion.identity);
+            }
+
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
             if (hasKey) {

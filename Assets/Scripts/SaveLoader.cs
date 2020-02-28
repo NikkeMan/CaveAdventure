@@ -5,7 +5,7 @@ using UnityEngine;
 public class SaveLoader : MonoBehaviour
 {
     [SerializeField] DataLinker dataLinker;
-    private void Awake()
+    private void Start()
     {
         dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
 

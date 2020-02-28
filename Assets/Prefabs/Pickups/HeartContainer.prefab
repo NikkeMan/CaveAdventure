@@ -100,6 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20693038273d044916dcd9bd0d924d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInstantiated: 1
+  spawnBump: 200
+  cooldownOnInstantiate: 1
+  pickUpCooldown: 1
   isJumpUpgrade: 0
   isDashUpgrade: 0
   isHealthUpgrade: 1

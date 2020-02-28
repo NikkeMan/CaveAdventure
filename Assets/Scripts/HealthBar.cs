@@ -12,6 +12,8 @@ public class HealthBar : MonoBehaviour {
     public GameObject heartContainer;
     public List<Image> hearts;
 
+    public bool playerDead = false;
+
     private void Start() {
         healthCurrent = healthMax;
         hearts = new List<Image>();
@@ -37,6 +39,8 @@ public class HealthBar : MonoBehaviour {
                 hearts[healthCurrent].fillAmount = 0;
 
                 if (healthCurrent == 0) {
+                    GameObject.Find("Player").GetComponent<Animator>().SetTrigger("PlayerDead");
+                    playerDead = true;
                     break;
                 }
             }

@@ -26,6 +26,10 @@ public class Bat : MonoBehaviour {
     private CircleCollider2D attackRange;
     public GameObject itemDrop;
 
+    [SerializeField] bool isVulnerable = true;
+    [SerializeField] float invulCooldown = 1f;
+    private float invulTimer = 0f;
+
     private void Start() {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         attackRange = gameObject.transform.GetComponentInChildren<CircleCollider2D>();
@@ -33,6 +37,23 @@ public class Bat : MonoBehaviour {
         animator = gameObject.GetComponent<Animator>();
 
         rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
+    }
+
+    private void Update()
+    {
+        if (!isVulnerable && invulTimer <= invulCooldown)
+        {
+            animator.SetBool("TakingDamage", true);
+            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 1);
+
+            invulTimer += Time.deltaTime;
+        }
+
+        else
+        {
+            animator.SetBool("TakingDamage", false);
+            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 0);
+        }
     }
 
     private void FixedUpdate() {
@@ -99,6 +120,8 @@ public class Bat : MonoBehaviour {
     public void TakeDamage(int damage) {
         health -= damage;
         AICoolDownTimer = 0;
+        isVulnerable = false;
+        invulTimer = 0f;
 
         if (health <= 0) {
             Die();
@@ -106,6 +129,7 @@ public class Bat : MonoBehaviour {
         else {
             KnockBack();
         }
+
     }
 
     public void KnockBack() {

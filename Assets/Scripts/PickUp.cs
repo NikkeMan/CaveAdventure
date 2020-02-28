@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    [Header("Options:")]
+    [SerializeField] bool isInstantiated = true;
+    [SerializeField] float spawnBump = 150f;
+
+    [SerializeField] bool cooldownOnInstantiate = true;
+    [SerializeField] float pickUpCooldown = 1f;
+    private float pickUpTimer = 0f;
+
     [Header("PickUp properties")]
     [SerializeField] bool isJumpUpgrade = false;
     [SerializeField] bool isDashUpgrade = false;
@@ -15,6 +23,25 @@ public class PickUp : MonoBehaviour
 
     private void Start() {
         healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
+
+        if (isInstantiated)
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * spawnBump);
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (isInstantiated && cooldownOnInstantiate)
+        {
+            pickUpTimer += Time.deltaTime;
+
+            if (pickUpTimer >= pickUpCooldown)
+            {
+                gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

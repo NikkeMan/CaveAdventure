@@ -11,11 +11,11 @@ public class CheckPoint : MonoBehaviour
     //[SerializeField] private SceneSwitch sceneSwitch;
     // [SerializeField] private Transform checkPointTransform;
 
-    private void Awake()
+    private void Start()
     {
-        dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
-        healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
-        score = GameObject.Find("ScorePanel").GetComponent<Score>();
+        //dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
+        //healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
+        //score = GameObject.Find("ScorePanel").GetComponent<Score>();
         //sceneSwitch = GameObject.Find("SceneLoader").GetComponent<SceneSwitch>();
     }
 
