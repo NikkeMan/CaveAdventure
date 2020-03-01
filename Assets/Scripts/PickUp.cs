@@ -23,6 +23,7 @@ public class PickUp : MonoBehaviour
 
     private void Start() {
         healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
+        dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
 
         if (isInstantiated)
         {

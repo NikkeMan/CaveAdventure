@@ -29,7 +29,7 @@ public class Slime : MonoBehaviour {
 
     [SerializeField] bool isVulnerable = true;
     [SerializeField] float invulCooldown = 1f;
-    private float invulTimer = 0f;
+    [SerializeField] float invulTimer = 0f;
 
     private void Start() {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
