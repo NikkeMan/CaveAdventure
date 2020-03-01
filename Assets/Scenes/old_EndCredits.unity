@@ -616,8 +616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.6, y: -1624}
-  m_SizeDelta: {x: 947.9, y: 2500}
+  m_AnchoredPosition: {x: 21.6, y: -1230.3}
+  m_SizeDelta: {x: 947.9, y: 1684.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &401016535
 Animator:
@@ -1064,8 +1064,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 0
-  loadByNameInstead: 0
-  sceneName: 
 --- !u!1 &979012589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,8 +1411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000011444092, y: -940}
-  m_SizeDelta: {x: 800, y: 1495.1}
+  m_AnchoredPosition: {x: -0.000011444092, y: -376}
+  m_SizeDelta: {x: 800, y: 752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318662220
 MonoBehaviour:
@@ -1434,9 +1432,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "--- End of demo ---\n\n\n\n\n\n\n\nArt\n\nLucid Design Art\nopengameart.org/users/ld\n\n\n\n\n\nGame
-    design\nLevel design\nUI design\nProgramming\n...\n\nJesse Koski\nNiko Lepp\xE4noro\n\n\n\n\n\n\nSound
-    design\n\nTime Constraints"
+  m_text: "Art by\n\nLucid Design Art\nopengameart.org/users/ld\n\n\n\nEverything
+    else by\n\nJesse Koski\nNiko Lepp\xE4noro"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d79bb255e614f75408bce198f98876ea, type: 2}
   m_sharedMaterial: {fileID: 2419944178063970759, guid: d79bb255e614f75408bce198f98876ea,
@@ -1482,7 +1479,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 177
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1506,12 +1503,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1318662220}
-    characterCount: 194
+    characterCount: 99
     spriteCount: 0
-    spaceCount: 46
-    wordCount: 28
+    spaceCount: 17
+    wordCount: 16
     linkCount: 0
-    lineCount: 34
+    lineCount: 11
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
@@ -2856,7 +2853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7442358579889558589
 Transform:
   m_ObjectHideFlags: 0

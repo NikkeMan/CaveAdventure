@@ -31,7 +31,7 @@ public class CheckPoint : MonoBehaviour
     {
         dataLinker.saveFile.isContinued = true;
         dataLinker.saveFile.saveHealthCurrent = healthBar.healthCurrent;
-        dataLinker.saveFile.saveLevel = SceneManager.GetActiveScene().buildIndex;
+        dataLinker.saveFile.saveLevel = SceneManager.GetActiveScene().buildIndex + 1;
         dataLinker.saveFile.saveScore = score.currentScore;
         dataLinker.saveFile.saveHealthMax = healthBar.healthMax;
         dataLinker.saveFile.powerUpDoubleJump = dataLinker.playerMovement.hasPUDoubleJump;

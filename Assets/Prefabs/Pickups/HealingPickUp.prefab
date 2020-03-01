@@ -118,7 +118,7 @@ MonoBehaviour:
   isInstantiated: 1
   spawnBump: 200
   cooldownOnInstantiate: 1
-  pickUpCooldown: 1
+  pickUpCooldown: 0.5
   isJumpUpgrade: 0
   isDashUpgrade: 0
   isHealthUpgrade: 0

@@ -1434,9 +1434,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "--- End of demo ---\n\n\n\n\n\n\n\nArt\n\nLucid Design Art\nopengameart.org/users/ld\n\n\n\n\n\nGame
-    design\nLevel design\nUI design\nProgramming\n...\n\nJesse Koski\nNiko Lepp\xE4noro\n\n\n\n\n\n\nSound
-    design\n\nTime Constraints"
+  m_text: "--- Created by ---\n\n\n\nArt\n\nLucid Design Art\nopengameart.org/users/ld\n\n\n\n\n\n\nGame
+    design\nLevel design\nUI design\nProgramming\n...\n\n\nJesse Koski\nNiko Lepp\xE4noro\n\n\n\n\n\n\n\nSound
+    design by\n\nTime Constraints"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d79bb255e614f75408bce198f98876ea, type: 2}
   m_sharedMaterial: {fileID: 2419944178063970759, guid: d79bb255e614f75408bce198f98876ea,
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 177
+  m_firstOverflowCharacterIndex: 179
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1506,12 +1506,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1318662220}
-    characterCount: 194
+    characterCount: 195
     spriteCount: 0
-    spaceCount: 46
+    spaceCount: 45
     wordCount: 28
     linkCount: 0
-    lineCount: 34
+    lineCount: 33
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0

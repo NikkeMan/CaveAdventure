@@ -666,6 +666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 2
+  loadByNameInstead: 1
+  sceneName: MenuCredits
 --- !u!1 &979012589
 GameObject:
   m_ObjectHideFlags: 0
