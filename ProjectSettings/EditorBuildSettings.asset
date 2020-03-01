@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 005b315d4df188f48aaed32ea1b41a4c
   - enabled: 1
-    path: Assets/Scenes/Level000_Intro.unity
+    path: Assets/Scenes/Level000_Intro1.unity
+    guid: c2f52d3b781f22f41b17043e36c674a9
+  - enabled: 1
+    path: Assets/Scenes/Level001_Intro2.unity
     guid: 67ed63bbdf78bbc46970c376b12bea4c
   - enabled: 1
     path: Assets/Scenes/NikkeLevels.unity
