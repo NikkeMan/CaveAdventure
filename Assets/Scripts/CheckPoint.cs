@@ -13,6 +13,7 @@ public class CheckPoint : MonoBehaviour
 
     private void Start()
     {
+        dataLinker.saveFile.saveLevel = SceneManager.GetActiveScene().buildIndex;
         //dataLinker = GameObject.Find("GameManager").GetComponent<DataLinker>();
         //healthBar = GameObject.Find("HealthPanel").GetComponent<HealthBar>();
         //score = GameObject.Find("ScorePanel").GetComponent<Score>();
