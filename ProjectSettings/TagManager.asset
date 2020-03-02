@@ -19,7 +19,7 @@ TagManager:
   - 
   - 
   - Pickup
-  - 
+  - PickupCollider
   - Player
   - PlayerAttackBox
   - Enemy
