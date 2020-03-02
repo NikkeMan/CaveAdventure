@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd32eb649473b1439fd755bdc3843c0, type: 3}
   m_Name: Save
   m_EditorClassIdentifier: 
-  isContinued: 1
-  saveHealthCurrent: 5
-  saveLevel: 4
+  isContinued: 0
+  saveHealthCurrent: 1
+  saveLevel: 1
   saveCheckpoint: 1
-  saveScore: 7500
+  saveScore: 0
   saveTimer: 0
-  saveHealthMax: 5
-  powerUpDoubleJump: 1
+  saveHealthMax: 1
+  powerUpDoubleJump: 0
   powerUpDash: 0
   saveHealthDefault: 1
   saveLevelDefault: 1
