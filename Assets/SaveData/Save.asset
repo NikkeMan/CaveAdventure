@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Save
   m_EditorClassIdentifier: 
   isContinued: 0
-  saveHealthCurrent: 1
-  saveLevel: 1
+  saveHealthCurrent: 3
+  saveLevel: 3
   saveCheckpoint: 1
   saveScore: 0
   saveTimer: 0
-  saveHealthMax: 1
+  saveHealthMax: 3
   powerUpDoubleJump: 0
   powerUpDash: 0
   saveHealthDefault: 1

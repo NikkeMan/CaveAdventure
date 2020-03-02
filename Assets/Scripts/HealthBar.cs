@@ -81,11 +81,13 @@ public class HealthBar : MonoBehaviour {
     public void IncreaseMaxHealth(int increaseAmount) {
         healthMax += increaseAmount;
         AddHeartContainer();
+        hearts[hearts.Count - 1].fillAmount = 0;
         Heal(1);
     }
 
     private void AddHeartContainer() {
         GameObject heart = GameObject.Instantiate(heartContainer, this.transform);
         hearts.Add(heart.transform.GetChild(0).GetComponentInChildren<Image>());
+        
     }
 }
