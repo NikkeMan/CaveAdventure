@@ -177,7 +177,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: f793cdbc00b41344b83447ab1fa010f7, type: 2}
+  m_Material: {fileID: 6200000, guid: 806f2340b4ed1eb4fa864ec9c627a72a, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -239,23 +239,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554b9a6d2409a9443b3a61c7a92691d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 10
   movementSpeed: 1
-  jumpForce: 60000
   attackPower: 1
   AICoolDownTimer: 0.4
   AICoolDownTimerMax: 0.4
-  knockBackForce: 10000
+  knockBackForce: 80000
   knockBackDirX: 1
   knockBackDirY: 1
   isFacingRight: 1
   isGrounded: 0
   animator: {fileID: 0}
+  velocityThreshold: 0.1
   itemDrop: {fileID: 4294367739707638507, guid: ed5967c47e0d0614fbf1bca7e986d3a0,
     type: 3}
   isVulnerable: 1
-  invulCooldown: 1
+  invulCooldown: 3
   invulTimer: 0
+  jumpForce: 70000
 --- !u!1 &3267990812061295910
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 2
 --- !u!114 &8120286280041885674
 MonoBehaviour:
   m_ObjectHideFlags: 0
