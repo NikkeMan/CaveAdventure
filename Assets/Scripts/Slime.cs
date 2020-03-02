@@ -1,61 +1,9 @@
 ﻿using UnityEngine;
 
-public class Slime : MonoBehaviour {
+public class Slime : Enemy {
 
-    [Header("Stats")]
-    [SerializeField] private int health = 3;
-    [SerializeField] private float movementSpeed = 1.5f;
+    [Header("Slimme stats")]
     [SerializeField] private float jumpForce = 100f;
-    public int attackPower = 1;
-
-    [Header("AI")]
-    [SerializeField] private float AICoolDownTimer = 0.5f;
-    [SerializeField] private float AICoolDownTimerMax = 0.5f;
-
-    [Header("Knockback")]
-    [SerializeField] private float knockBackForce = 100f;
-    [SerializeField] private float knockBackDirX = 1;
-    [SerializeField] private float knockBackDirY = 1;
-
-    [Header("Other")]
-    [SerializeField] private bool isFacingRight = true;
-    [SerializeField] public bool isGrounded = true;
-    [SerializeField] public Animator animator;
-    private Rigidbody2D rigidBody;
-    private float velocityThreshold = 0.1f;
-    private GameObject player;
-    private CircleCollider2D attackRange;
-    public GameObject itemDrop;
-
-    [SerializeField] bool isVulnerable = true;
-    [SerializeField] float invulCooldown = 1f;
-    [SerializeField] float invulTimer = 0f;
-
-    private void Start() {
-        rigidBody = gameObject.GetComponent<Rigidbody2D>();
-        attackRange = gameObject.transform.GetComponentInChildren<CircleCollider2D>();
-        player = GameObject.Find("Player");
-        animator = gameObject.GetComponent<Animator>();
-
-        rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
-    }
-
-    private void Update()
-    {
-        if (!isVulnerable && invulTimer <= invulCooldown)
-        {
-            animator.SetBool("TakingDamage", true);
-            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 1);
-
-            invulTimer += Time.deltaTime;
-        }
-
-        else
-        {
-            animator.SetBool("TakingDamage", false);
-            animator.SetLayerWeight(animator.GetLayerIndex("TakingDamageLayer"), 0);
-        }
-    }
 
     private void FixedUpdate() {
         if (AICoolDownTimer >= AICoolDownTimerMax && isGrounded) {
@@ -64,29 +12,6 @@ public class Slime : MonoBehaviour {
         else if (AICoolDownTimer < AICoolDownTimerMax && isGrounded) {
             AICoolDownTimer += Time.deltaTime;
         }
-    }
-
-    private void Move() {
-        animator.SetBool("isAttacking", false);
-        attackRange.enabled = true;
-
-        // Sometimes the enemy gets stuck when facing a wall and velocity is not 0, that's why we use a threshold (for example -0.1 < velocity < +0.1)
-        if (rigidBody.velocity.x >= -velocityThreshold && rigidBody.velocity.x <= velocityThreshold) {
-            // Is against a wall, turn around:
-            TurnAround();
-        }
-
-        if (isFacingRight) {
-            rigidBody.velocity = new Vector2(movementSpeed, rigidBody.velocity.y);
-        }
-        else {
-            rigidBody.velocity = new Vector2(-movementSpeed, rigidBody.velocity.y);
-        }
-    }
-
-    public void TurnAround() {
-        isFacingRight = !isFacingRight;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
     }
 
     public void Attack() {
@@ -118,41 +43,5 @@ public class Slime : MonoBehaviour {
         Vector2 playerDirection = new Vector2(pos1.x - pos2.x, pos1.y - pos2.y).normalized;
         Vector2 jumpDirection = new Vector2(playerDirection.x / 2, (playerDirection.y + 1) / 2);
         return jumpDirection;
-    }
-
-    public void TakeDamage(int damage) {
-        health -= damage;
-        AICoolDownTimer = 0;
-        isVulnerable = false;
-        invulTimer = 0f;
-
-        if (health <= 0) {
-            Die();
-        }
-        else {
-            KnockBack();
-        }
-    }
-
-    public void KnockBack() {
-        rigidBody.velocity = Vector2.zero;
-        Vector2 knockBackDir = Vector2.zero;
-
-        if (gameObject.transform.position.x > player.transform.position.x) {
-            // Player is on the left side:
-            knockBackDir = new Vector2(knockBackDirX, knockBackDirY);
-        }
-        else if (gameObject.transform.position.x < player.transform.position.x) {
-            // Player is on the right side:
-            knockBackDir = new Vector2(-knockBackDirX, knockBackDirY);
-        }
-
-        rigidBody.AddForce(knockBackDir * knockBackForce);
-        AICoolDownTimer = 0;
-    }
-
-    private void Die() {
-        Object.Instantiate(itemDrop, transform.position, Quaternion.identity);
-        Object.Destroy(this.gameObject);
     }
 }

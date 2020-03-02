@@ -310,7 +310,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: f793cdbc00b41344b83447ab1fa010f7, type: 2}
+  m_Material: {fileID: 6200000, guid: 7a365ab87702eed42ad76012c12ae008, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -374,15 +374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   movementSpeed: 1
-  jumpForce: 400
+  jumpForce: 450
   attackPower: 1
   AICoolDownTimer: 0.5
   AICoolDownTimerMax: 0.5
-  knockBackForce: 100
+  knockBackForce: 200
   knockBackDirX: 1
   knockBackDirY: 1
   isFacingRight: 1
   isGrounded: 0
   animator: {fileID: 0}
+  velocityThreshold: 0.25
   itemDrop: {fileID: 5590801384697165417, guid: 15aaa3624fa58e54facc68deccc26271,
     type: 3}
+  isVulnerable: 1
+  invulCooldown: 1
+  invulTimer: 0
