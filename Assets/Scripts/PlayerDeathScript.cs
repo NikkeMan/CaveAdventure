@@ -13,6 +13,8 @@ public class PlayerDeathScript : MonoBehaviour
     {
         if (healthBar.playerDead)
         {
+            dataLinker.playerMovement.playerInputsDisabled = true;
+
             healthBar.playerDead = false;
             sceneSwitch.LoadScene();
         }
