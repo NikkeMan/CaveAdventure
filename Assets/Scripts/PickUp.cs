@@ -12,6 +12,8 @@ public class PickUp : MonoBehaviour
     [SerializeField] float pickUpCooldown = 1f;
     private float pickUpTimer = 0f;
 
+    [SerializeField] private Rigidbody2D rb2d;
+
     [Header("PickUp properties")]
     [SerializeField] bool isJumpUpgrade = false;
     [SerializeField] bool isDashUpgrade = false;
@@ -27,7 +29,7 @@ public class PickUp : MonoBehaviour
 
         if (isInstantiated)
         {
-            gameObject.GetComponentInChildren<Rigidbody2D>().AddForce(transform.up * spawnBump);
+            rb2d.AddForce(transform.up * spawnBump);
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
@@ -71,7 +73,7 @@ public class PickUp : MonoBehaviour
             if (isHealing && healthBar.healthCurrent < healthBar.healthMax)
             {
                 healthBar.Heal(1);
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
 
             if (isHealing && healthBar.healthCurrent >= healthBar.healthMax)
@@ -81,6 +83,7 @@ public class PickUp : MonoBehaviour
 
             else
             {
+                if (!isHealing)
                 Destroy(gameObject);
             }
         }
