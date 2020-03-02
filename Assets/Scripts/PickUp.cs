@@ -68,13 +68,20 @@ public class PickUp : MonoBehaviour
                 healthBar.IncreaseMaxHealth(1);
             }
 
-            if (isHealing)
+            if (isHealing && healthBar.healthCurrent < healthBar.healthMax)
             {
                 healthBar.Heal(1);
+            }
+
+            if (isHealing && healthBar.healthCurrent >= healthBar.healthMax)
+            {
 
             }
 
-            Destroy(gameObject);
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -81,7 +81,7 @@ public class HealthBar : MonoBehaviour {
     public void IncreaseMaxHealth(int increaseAmount) {
         healthMax += increaseAmount;
         AddHeartContainer();
-        Heal(healthMax);
+        Heal(1);
     }
 
     private void AddHeartContainer() {
