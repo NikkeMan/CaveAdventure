@@ -27,7 +27,7 @@ public class PickUp : MonoBehaviour
 
         if (isInstantiated)
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * spawnBump);
+            gameObject.GetComponentInChildren<Rigidbody2D>().AddForce(transform.up * spawnBump);
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
@@ -71,6 +71,7 @@ public class PickUp : MonoBehaviour
             if (isHealing && healthBar.healthCurrent < healthBar.healthMax)
             {
                 healthBar.Heal(1);
+                Destroy(gameObject);
             }
 
             if (isHealing && healthBar.healthCurrent >= healthBar.healthMax)
