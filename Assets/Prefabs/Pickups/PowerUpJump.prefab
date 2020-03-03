@@ -121,7 +121,7 @@ MonoBehaviour:
   spawnBump: 150
   cooldownOnInstantiate: 1
   pickUpCooldown: 0.5
-  rb2d: {fileID: 0}
+  rb2d: {fileID: 6266132217110076501}
   isJumpUpgrade: 1
   isDashUpgrade: 0
   isHealthUpgrade: 0
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4294367739707638507}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

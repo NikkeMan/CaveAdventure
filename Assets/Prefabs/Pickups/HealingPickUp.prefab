@@ -63,7 +63,7 @@ MonoBehaviour:
   isInstantiated: 1
   spawnBump: 150
   cooldownOnInstantiate: 1
-  pickUpCooldown: 1
+  pickUpCooldown: 0.2
   rb2d: {fileID: 5434224392509133120}
   isJumpUpgrade: 0
   isDashUpgrade: 0
@@ -195,7 +195,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &5841719550780253740
 GameObject:
   m_ObjectHideFlags: 0
